@@ -4386,6 +4386,7 @@ height: auto !important;
 .marquee{
 	white-space:nowrap;
 	overflow:hidden;
+	margin-right: 200px;
 }
 
 /* Text animation */
@@ -4421,11 +4422,6 @@ height: auto !important;
 	transition:all 0.3s ease;
 }
 
-/* Button hover effect */
-.apply-btn:hover{
-	transform:translateY(-50%) scale(1.08);
-	box-shadow:0 6px 18px rgba(38,130,88,0.4);
-}
 
 /* Pause animation on hover */
 .marquee-wrapper:hover span{
@@ -4453,4 +4449,80 @@ height: auto !important;
 	.marquee span{
 		font-size:15px;
 	}
+}
+
+
+/* PopUp image  */
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal Box */
+.popup-content {
+  position: relative;
+  background: #ffffff;
+  width: 90%;
+  max-width: 520px;
+  border-radius: 20px;
+  padding: 25px 25px 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: popupFade 0.3s ease;
+  text-align: center;
+}
+
+/* Close Button (X) */
+.close-icon {
+  position: absolute;
+  top: 3px;
+  right: 7px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #999;
+  transition: 0.3s;
+}
+
+.close-icon:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+
+/* Image */
+.popup-content img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Apply Button */
+.apply-btn {
+  background: linear-gradient(135deg,#268258,#A9D465);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 18px rgba(38,130,88,0.3);
+}
+/* Animation */
+@keyframes popupFade {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media(max-width:480px){
+  .popup-content {
+    padding: 20px;
+  }
 }

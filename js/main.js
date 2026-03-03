@@ -340,3 +340,11 @@ var swiper = new Swiper('.swiper-container', {
 
 
 })(jQuery);
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+function goToApply() {
+  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe2HbAb9uyCtJ7TAI3rNBN6ImxZHG6u_36VQhoHDIqkpCnpxw/viewform?usp=dialog"; // change link
+}

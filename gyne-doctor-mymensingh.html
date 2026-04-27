@@ -1,155 +1,185 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ময়মনসিংহে নরমাল ডেলিভারি গাইড ও ডাক্তার তথ্য | সুসেবা</title>
+    <meta name="description" content="ময়মনসিংহে নরমাল ডেলিভারি সম্পর্কিত পূর্ণাঙ্গ গাইড। বিশেষজ্ঞ ডাক্তারের চেম্বার তথ্য, প্রস্তুতি এবং সুবিধা সম্পর্কে বিস্তারিত জানুন।">
+    
+    <style>
+        :root {
+            --primary-color: #1f3a5f;
+            --secondary-color: #3498db;
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --white: #ffffff;
+            --accent-color: #e74c3c;
+            --app-color: #6c5ce7;
+        }
 
-<title>ময়মনসিংহে নরমাল ডেলিভারি গাইড</title>
-<meta name="description" content="ময়মনসিংহে নরমাল ডেলিভারি সম্পর্কিত সম্পূর্ণ গাইড, ডাক্তার তথ্য ও নিরাপদ প্রসব পরামর্শ">
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
 
-<style>
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), #2c3e50);
+            color: var(--white);
+            text-align: center;
+            padding: 50px 20px;
+        }
 
-/* RESET */
-body{
-    margin:0;
-    padding:0;
-    font-family: Arial, sans-serif;
-    background:#f5f7fb;
-    color:#333;
-}
+        .container {
+            max-width: 850px;
+            margin: -40px auto 50px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
-/* HEADER */
-.header{
-    background:#1f3a5f;
-    color:white;
-    text-align:center;
-    padding:18px;
-}
+        h1 { color: var(--primary-color); text-align: center; font-size: 28px; }
+        h2 { color: var(--primary-color); border-left: 5px solid var(--secondary-color); padding-left: 15px; margin-top: 35px; font-size: 22px; }
+        
+        p { margin-bottom: 20px; font-size: 17px; text-align: justify; }
 
-/* MAIN CONTAINER */
-.container{
-    max-width:900px;
-    margin:0 auto;
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
+        .doctor-card {
+            background: #f0f7ff;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid #d1e3f8;
+        }
 
-/* TITLE */
-h1{
-    text-align:center;
-    color:#1f3a5f;
-}
+        .doctor-name { font-weight: bold; font-size: 20px; color: var(--primary-color); display: block; margin-bottom: 8px; }
 
-h2{
-    color:#2c3e50;
-    border-left:5px solid #3498db;
-    padding-left:10px;
-    margin-top:25px;
-}
+        ul { margin-bottom: 20px; }
+        ul li { margin-bottom: 12px; font-size: 16px; }
 
-/* TEXT */
-p{
-    line-height:1.8;
-    font-size:16px;
-}
+        /* Internal Link Box */
+        .internal-link-box {
+            margin: 40px 0;
+            padding: 30px;
+            background: #fff4f4;
+            border: 2px dashed var(--accent-color);
+            border-radius: 12px;
+            text-align: center;
+        }
 
-/* LIST */
-ul{
-    line-height:1.8;
-}
+        .btn-article {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-/* INFO BOX */
-.box{
-    background:#eef3f8;
-    padding:15px;
-    border-radius:10px;
-    margin:10px 0;
-}
+        /* App Box */
+        .app-promotion {
+            background: linear-gradient(135deg, var(--app-color), #a29bfe);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
 
-/* FOOTER */
-.footer{
-    text-align:center;
-    padding:15px;
-    font-size:14px;
-    color:#777;
-    margin-top:20px;
-}
+        .btn-app {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 35px;
+            background-color: white;
+            color: var(--app-color);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
-</style>
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--primary-color);
+            color: #cbd5e1;
+            font-size: 14px;
+        }
 
+        @media (max-width: 600px) {
+            .container { margin: 10px; padding: 25px; }
+            h1 { font-size: 24px; }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="header">
-    <h1>স্বাস্থ্য গাইড ব্লগ</h1>
-</div>
+    <div class="header">
+        <h1>সুসেবা স্বাস্থ্য ও সচেতনতা</h1>
+    </div>
 
-<div class="container">
+    <div class="container">
+        <h1>ময়মনসিংহে নরমাল ডেলিভারি: পূর্ণাঙ্গ গাইড ও পরামর্শ</h1>
+        
+        <p>একজন মায়ের জীবনে মাতৃত্বের স্বাদ এক অনন্য অভিজ্ঞতা। বর্তমান সময়ে আধুনিক চিকিৎসার প্রসারে সিজারিয়ান ডেলিভারি বাড়লেও, মা ও শিশুর দীর্ঘমেয়াদী সুস্বাস্থ্যের জন্য বিশেষজ্ঞগণ সর্বদা "নরমাল ডেলিভারি" বা স্বাভাবিক প্রসবকে প্রাধান্য দিয়ে থাকেন। বিশেষ করে ময়মনসিংহ অঞ্চলে নিরাপদ প্রসব নিশ্চিত করতে বেশ কিছু দক্ষ প্রতিষ্ঠান ও চিকিৎসক কাজ করছেন।</p>
 
-<h1>ময়মনসিংহে নরমাল ডেলিভারি</h1>
+        <h2>নরমাল ডেলিভারি কেন শ্রেয়?</h2>
+        <p>স্বাভাবিক প্রসবের অনেকগুলো ইতিবাচক দিক রয়েছে যা মা ও শিশু উভয়ের জন্যই মঙ্গলজনক। প্রথমত, নরমাল ডেলিভারিতে মা খুব দ্রুত সুস্থ হয়ে ওঠেন এবং হাসপাতালে থাকার সময়ও কমে যায়। দ্বিতীয়ত, স্বাভাবিক উপায়ে জন্ম নেওয়া শিশুর রোগ প্রতিরোধ ক্ষমতা বা ইমিউনিটি অনেক বেশি থাকে। এছাড়াও এতে সিজারিয়ান অপারেশনের মতো কোনো কাটা-ছেঁড়া বা রক্তপাতের ঝুঁকি থাকে না।</p>
 
-<h2>নরমাল ডেলিভারি কি?</h2>
-<p>
-নরমাল ডেলিভারি বা স্বাভাবিক প্রসব হলো এমন একটি প্রক্রিয়া যেখানে মায়ের শরীরের স্বাভাবিক উপায়ে কোনো অপারেশন ছাড়াই শিশুর জন্ম হয়।
-</p>
+        <h2>বিশেষজ্ঞ ডাক্তারের তথ্য (ময়মনসিংহ)</h2>
+        <p>সঠিক সময়ে সঠিক চিকিৎসকের পরামর্শ নেওয়া নরমাল ডেলিভারির জন্য সবথেকে গুরুত্বপূর্ণ ধাপ। ময়মনসিংহ মেডিকেল কলেজ হাসপাতালের অভিজ্ঞ চিকিৎসকগণ এ বিষয়ে বিশেষ গুরুত্ব দিয়ে থাকেন।</p>
+        
+        <div class="doctor-card">
+            <span class="doctor-name">অধ্যাপক ডাঃ তানজিনা লতিফ (যুথি)</span>
+            এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (গাইনি ও প্রসূতি)<br>
+            গাইনি ও প্রসূতি রোগ বিশেষজ্ঞ ও সার্জন<br>
+            ময়মনসিংহ মেডিকেল কলেজ ও হাসপাতাল।
+        </div>
 
-<h2>অভিজ্ঞ বিশেষজ্ঞ ডাক্তারের পরামর্শ</h2>
-<div class="box">
-অধ্যাপক ডাঃ তানজিনা লতিফ (যুথি)<br>
-গাইনি ও প্রসূতি রোগ বিশেষজ্ঞ<br>
-ময়মনসিংহ মেডিকেল কলেজ হাসপাতাল
-</div>
+        <div class="doctor-card" style="background: #f8fafc; border-left: 6px solid #2ecc71;">
+            <strong>চেম্বার তথ্য:</strong> ডেলটা হেলথ কেয়ার, ময়মনসিংহ<br>
+            <strong>রোগী দেখার সময়:</strong> প্রতিদিন বিকাল ৪টা হতে রাত ১০টা পর্যন্ত।<br>
+            <strong>সিরিয়াল ও যোগাযোগের জন্য:</strong> <span style="color: #e74c3c; font-weight: bold;">01758-020057</span>
+        </div>
 
-<h2>চেম্বার তথ্য</h2>
-<div class="box">
-ডেলটা হেলথ কেয়ার, ময়মনসিংহ<br>
-সময়: বিকাল ৪টা – রাত ১০টা<br>
-ফি: ১০০০ টাকা<br>
-যোগাযোগ: 01758-020057
-</div>
+        <h2>স্বাভাবিক প্রসবের জন্য প্রস্তুতি</h2>
+        <p>নরমাল ডেলিভারি একটি দীর্ঘ প্রক্রিয়া, যার জন্য গর্ভাবস্থার প্রথম মাস থেকেই প্রস্তুতি নিতে হয়। এর মধ্যে রয়েছে:</p>
+        <ul>
+            <li><strong>সুষম খাবার:</strong> খাবারে ক্যালসিয়াম, আয়রন এবং প্রোটিনের ভারসাম্য বজায় রাখতে হবে।</li>
+            <li><strong>শারীরিক সক্রিয়তা:</strong> চিকিৎসকের অনুমতি নিয়ে প্রতিদিন অন্তত ২০-৩০ মিনিট হালকা হাঁটাহাঁটি করা উচিত। এটি শরীরের পেশিকে প্রসবের জন্য প্রস্তুত করে।</li>
+            <li><strong>মানসিক স্বাস্থ্য:</strong> অতিরিক্ত দুশ্চিন্তা প্রসব প্রক্রিয়াকে জটিল করতে পারে। তাই সব সময় হাসি-খুশি থাকা জরুরি।</li>
+        </ul>
 
-<h2>নরমাল ডেলিভারির সুবিধা</h2>
-<ul>
-<li>দ্রুত সুস্থ হওয়া</li>
-<li>কম ঝুঁকি</li>
-<li>কম খরচ</li>
-<li>নিরাপদ প্রসব</li>
-</ul>
+        <!-- ১. ইন্টারনাল লিংক সেকশন (আপনার দেওয়া সঠিক লিংক) -->
+        <div class="internal-link-box">
+            <h3 style="margin: 0; color: #c0392b;">গর্ভাবস্থায় খাবার নিয়ে দুশ্চিন্তা হচ্ছে?</h3>
+            <p style="font-size: 16px;">গর্ভকালীন সময়ে কোন খাবারগুলো আপনার এবং শিশুর জন্য ঝুঁকিপূর্ণ হতে পারে তা বিস্তারিত জানতে আমাদের বিশেষজ্ঞ গাইডটি অবশ্যই পড়ুন।</p>
+            <a href="https://suseba.com" class="btn-article">খাবার ও ডায়েট সতর্কতা পড়ুন</a>
+        </div>
 
-<h2>নরমাল ডেলিভারির জন্য প্রস্তুতি</h2>
-<ul>
-<li>নিয়মিত ডাক্তারের চেকআপ</li>
-<li>পুষ্টিকর খাবার (দুধ, ডিম, ফলমূল)</li>
-<li>হালকা ব্যায়াম</li>
-<li>মানসিক প্রস্তুতি</li>
-</ul>
+        <h2>কখন বুঝবেন প্রসবের সময় হয়েছে?</h2>
+        <p>অনেকেই প্রসব বেদনার আসল লক্ষণগুলো বুঝতে পারেন না। যদি তীব্র পেট ব্যথা যা পিঠের নিচ থেকে শুরু হয়ে সামনে ছড়িয়ে পড়ে, নিয়মিত ব্যবধানে ব্যথা বাড়ে, কিংবা পানি বা রক্ত দেখা দেয়—তবে দেরি না করে দ্রুত হাসপাতালে যেতে হবে।</p>
 
-<h2>কখন ডাক্তারের কাছে যাবেন</h2>
-<ul>
-<li>তীব্র পেট ব্যথা হলে</li>
-<li>রক্তপাত হলে</li>
-<li>বাচ্চার নড়াচড়া কমে গেলে</li>
-<li>সময়সীমা পার হলে</li>
-</ul>
+        <!-- ২. অ্যাপ প্রমোশন সেকশন (আপনার অ্যাপের সঠিক লিংক) -->
+        <div class="app-promotion">
+            <h3 style="margin: 0;">প্রয়োজনীয় ডাক্তারের তথ্য পান হাতের মুঠোয়!</h3>
+            <p style="font-size: 16px; margin: 15px 0;">ময়মনসিংহের সকল অভিজ্ঞ ডাক্তারদের চেম্বার, ভিজিট ও সরাসরি সিরিয়ালের সকল তথ্য পেতে আপনার ফোনে ইনস্টল করুন আমাদের অফিসিয়াল 'সুসেবা' অ্যাপ।</p>
+            <a href="https://google.com" target="_blank" class="btn-app">প্লে-স্টোর থেকে অ্যাপটি ডাউনলোড করুন</a>
+        </div>
 
-<h2>শেষ কথা</h2>
-<p>
-নিরাপদ মাতৃত্বের জন্য অভিজ্ঞ ডাক্তারের পরামর্শ খুবই গুরুত্বপূর্ণ।
-</p>
+        <h2>পরিশেষ</h2>
+        <p>নিরাপদ মাতৃত্ব আমাদের সকলের কাম্য। সঠিক পরিকল্পনা এবং অভিজ্ঞ ডাক্তারের তত্ত্বাবধানে থাকলে অধিকাংশ ক্ষেত্রেই নরমাল ডেলিভারি সম্ভব। ময়মনসিংহে এই সুবিধাগুলো কাজে লাগিয়ে আপনিও একটি সুস্থ ও সুন্দর আগামীর স্বপ্ন দেখতে পারেন।</p>
+    </div>
 
-<h2>আরও পড়ুন</h2>
-<p>
-গর্ভাবস্থা ও প্রসব সম্পর্কিত আরও তথ্য পেতে আমাদের অন্যান্য আর্টিকেল পড়ুন।
-</p>
-
-</div>
-
-<div class="footer">
-© 2026 Health Blog | All Rights Reserved
-</div>
+    <div class="footer">
+        © 2026 Suseba Health Care | স্বাস্থ্য ও সচেতনতাই আমাদের মূল লক্ষ্য
+    </div>
 
 </body>
-            </html>
+</html>

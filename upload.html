@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Image</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #268258;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #1f6e49;
+        }
+
+        .result {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .result input {
+            width: calc(100% - 90px);
+            display: inline-block;
+        }
+
+        .copy-btn {
+            width: 80px;
+            margin-left: 5px;
+            background: #A9D465;
+            color: #000;
+        }
+
+        .loading {
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Upload Image</h2>
+
+    <input type="text" id="secretNumber" placeholder="Enter secret number" />
+    <input type="file" id="imageFile" />
+
+    <button id="uploadBtn">Upload</button>
+
+    <div class="loading">Uploading...</div>
+
+    <div class="result">
+        <label>Response URL:</label><br>
+        <input type="text" id="responseUrl" readonly />
+        <button class="copy-btn" id="copyBtn">Copy</button>
+    </div>
+</div>
+
+<script>
+    $("#uploadBtn").click(function () {
+        let secret = $("#secretNumber").val();
+        let file = $("#imageFile")[0].files[0];
+
+        if (!secret || !file) {
+            alert("Please fill all fields");
+            return;
+        }
+
+        let formData = new FormData();
+        formData.append("file", file);
+
+        $(".loading").show();
+        $(".result").hide();
+
+        $.ajax({
+            url: "http://localhost:8005/auth/spaces/upload/"+ encodeURIComponent(secret),
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (res) {
+                $(".loading").hide();
+
+                // assuming API returns { url: "https://..." }
+                $("#responseUrl").val(res.url);
+
+                $(".result").show();
+            },
+            error: function () {
+                $(".loading").hide();
+                alert("Upload failed");
+            }
+        });
+    });
+
+    $("#copyBtn").click(function () {
+        let copyText = document.getElementById("responseUrl");
+        copyText.select();
+        document.execCommand("copy");
+        alert("Copied!");
+    });
+</script>
+
+</body>
+</html>

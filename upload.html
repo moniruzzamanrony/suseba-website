@@ -115,7 +115,7 @@
         $(".result").hide();
 
         $.ajax({
-            url: "http://localhost:8005/auth/spaces/upload/"+ encodeURIComponent(secret),
+            url: "http://api.suseba.com/auth/spaces/upload/"+ encodeURIComponent(secret),
             type: "POST",
             data: formData,
             processData: false,

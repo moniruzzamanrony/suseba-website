@@ -77,13 +77,41 @@ ul{padding-left:20px;}
 li{margin-bottom:8px;}
 
 /* Read More */
-.read-box{
-    background:#ffeaea;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-    margin:30px 0;
-}
+    .read-more-container {
+        background-color: #fdf2f2; /* হালকা ব্যাকগ্রাউন্ড রঙ */
+        border-left: 5px solid #ff4d4d; /* বাম পাশে লাল বর্ডার */
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 8px;
+        font-family: 'SolaimanLipi', sans-serif;
+    }
+    .read-more-title {
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+        display: block;
+    }
+    .read-more-container a {
+        display: block; /* প্রতিটি লিঙ্ক আলাদা লাইনে আসবে */
+        color: #0056b3;
+        text-decoration: none;
+        padding: 5px 0;
+        border-bottom: 1px dashed #ccc; /* লিঙ্কের নিচে হালকা দাগ */
+        transition: 0.3s;
+    }
+    .read-more-container a:last-child {
+        border-bottom: none;
+    }
+    .read-more-container a:hover {
+        color: #ff4d4d;
+        padding-left: 10px; /* মাউস নিলে একটু সরে আসবে */
+    }
+    .read-more-container a::before {
+        content: "➤ "; /* প্রতিটি লিঙ্কের শুরুতে তীর চিহ্ন */
+        color: #ff4d4d;
+        margin-right: 8px;
+    }
 
 /* Button */
 .btn{
@@ -119,13 +147,13 @@ li{margin-bottom:8px;}
 
 <p>অনেকেই দ্রুত ওজন কমাতে চান, কিন্তু ভুল পদ্ধতি অনুসরণ করার কারণে শরীরে ক্ষতি হয়ে যায়। তাই নিরাপদ উপায়ে ওজন কমানোই সবচেয়ে গুরুত্বপূর্ণ।</p>
 
-<div class="read-box">
-👉 আরও পড়ুন:
-<a href="https://suseba.com/gastric-problem-solution.html">গ্যাস্ট্রিক সমস্যার সমাধান</a>
-<a href="https://suseba.com/diabetics-tips.html">ডায়াবেটিস নিয়ন্ত্রণের সহজ ও কার্যকর উপায়</a>
-<a href="https://suseba.com/pregnancy-food.html"> গর্ভাবস্থায় পূর্ণাঙ্গ খাদ্য তালিকা ও বিশেষ সতর্কতা </a>
-  <a href="https://suseba.com/gyne-doctor-mymensingh.html"> নরমাল ডেলিভারি গাইড</a>
-    <a href="https://suseba.com/high-blood-pressure-control.html"> উচ্চ রক্তচাপ নিয়ন্ত্রণ গাইড</a>
+<div class="read-more-container">
+    <span class="read-more-title">👉 আরও পড়ুন:</span>
+    <a href="https://suseba.com/gastric-problem-solution.html">গ্যাস্ট্রিক সমস্যার সমাধান</a>
+    <a href="https://suseba.com/diabetics-tips.html">ডায়াবেটিস নিয়ন্ত্রণের সহজ ও কার্যকর উপায়</a>
+    <a href="https://suseba.com/pregnancy-food.html">গর্ভাবস্থায় পূর্ণাঙ্গ খাদ্য তালিকা ও বিশেষ সতর্কতা</a>
+    <a href="https://suseba.com/gyne-doctor-mymensingh.html">নরমাল ডেলিভারি গাইড</a>
+    <a href="https://suseba.com/high-blood-pressure-control.html">উচ্চ রক্তচাপ নিয়ন্ত্রণ গাইড</a>
 </div>
 
 <h2>ওজন বাড়ার প্রধান কারণ</h2>

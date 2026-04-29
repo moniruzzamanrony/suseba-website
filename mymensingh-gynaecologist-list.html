@@ -15,7 +15,77 @@ body{font-family:Arial;line-height:1.7;margin:20px;background:#f4f6f8}
 h1{color:#1f2d3d}
 h2{color:#2c3e50}
 .card{background:#fff;padding:20px;margin-bottom:20px;border-radius:12px;box-shadow:0 0 10px rgba(0,0,0,0.08)}
-.section{background:#fff;padding:20px;margin-bottom:20px;border-radius:12px}
+/* অ্যাপ সেকশনের মেইন বক্স */
+.suseba-app-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+    font-family: 'SolaimanLipi', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* টাইটেল স্টাইল */
+.suseba-app-box h2 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+/* প্যারাগ্রাফ স্টাইল */
+.suseba-app-box p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* ডাউনলোড বাটনের কন্টেইনার */
+.download-wrapper {
+    margin-top: 20px;
+    padding: 15px;
+    display: inline-block;
+}
+
+/* গুগল প্লে বাটন স্টাইল */
+.play-store-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.play-store-btn:hover {
+    transform: scale(1.05);
+    background-color: #222;
+}
+
+.play-store-btn img {
+    width: 28px;
+    margin-right: 12px;
+}
+
+.btn-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.get-it-text {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.google-play-text {
+    font-size: 18px;
+    font-weight: bold;
+}
 .footer{text-align:center;margin-top:30px;font-size:14px;color:#666}
 a{color:#0066cc;text-decoration:none}
 a:hover{text-decoration:underline}
@@ -149,28 +219,29 @@ a:hover{text-decoration:underline}
 নিকটস্থ হাসপাতাল বা চেম্বারে দ্রুত যোগাযোগ করুন।</p>
 </div>
 
-<!-- APP SECTION -->
-<div class="section">
-<h2>আরও তথ্য ও অ্যাপ ব্যবহার করুন</h2>
+<div class="suseba-app-box">
+    <h2>আরও তথ্য ও অ্যাপ ব্যবহার করুন</h2>
 
-<p>
-আপনি যদি আরও ডাক্তার, চেম্বার তথ্য এবং স্বাস্থ্য সেবা সম্পর্কে জানতে চান,
-তাহলে আমাদের মোবাইল অ্যাপ ব্যবহার করতে পারেন।
-</p>
+    <p>
+        আপনি যদি আরও ডাক্তার, চেম্বার তথ্য এবং স্বাস্থ্য সেবা সম্পর্কে জানতে চান,
+        তাহলে আমাদের মোবাইল অ্যাপ ব্যবহার করতে পারেন।
+    </p>
 
-<p>
-এই অ্যাপের মাধ্যমে আপনি সহজেই ডাক্তার খুঁজে বের করতে পারবেন এবং আপডেট তথ্য জানতে পারবেন।
-</p>
+    <p>
+        এই অ্যাপের মাধ্যমে আপনি সহজেই ডাক্তার খুঁজে বের করতে পারবেন এবং আপডেট তথ্য জানতে পারবেন।
+    </p>
 
-<p>
-👉 <b>অ্যাপ ডাউনলোড করুন:</b><br>
-<a href="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" target="_blank">
-Google Play Store থেকে অ্যাপটি ডাউনলোড করুন
-</a>
-</p>
-
+    <div class="download-wrapper">
+        <p style="font-weight:bold; color:#000;">👉 অ্যাপটি ডাউনলোড করুন:</p>
+        <a href="https://google.com" target="_blank" class="play-store-btn">
+            <img src="https://wikimedia.org" alt="Play Store">
+            <div class="btn-text">
+                <span class="get-it-text">GET IT ON</span>
+                <span class="google-play-text">Google Play</span>
+            </div>
+        </a>
+    </div>
 </div>
-
 <div class="footer">
 <p>© 2026 Mymensingh Gynae Doctor Directory</p>
 </div>

@@ -1,244 +1,133 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- মেটা কিওয়ার্ড ও ডেসক্রিপশন সেকশন -->
-    <title>ঘরে বসে ডাক্তারের সিরিয়াল দেয়ার সহজ উপায় - সুসেবা (Suseba) অ্যাপ</title>
-    <meta name="description" content="সুসেবা (Suseba) অ্যাপের মাধ্যমে এখন ঘরে বসেই বিশেষজ্ঞ ডাক্তারের সিরিয়াল দিন। অনলাইনে ডাক্তার অ্যাপয়েন্টমেন্ট, ভিডিও কনসাল্টেশন এবং ময়মনসিংহ অঞ্চলের সেরা ডাক্তারদের তালিকা জানুন।">
-    <meta name="keywords" content="ডাক্তারের সিরিয়াল, অনলাইনে ডাক্তারের সিরিয়াল, সুসেবা অ্যাপ, Suseba App, ঘরে বসে ডাক্তার দেখানো, ময়মনসিংহের ডাক্তার তালিকা, অনলাইন ডাক্তার অ্যাপয়েন্টমেন্ট বাংলাদেশ, স্বাস্থ্যসেবা অ্যাপ, ডাক্তার বুকিং করার উপায়, Health Care Service App Bangladesh">
-    <meta name="author" content="Suseba">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ফন্ট এবং স্টাইল -->
-    <link href="https://googleapis.com" rel="stylesheet">
-    <style>
-        .suseba-article {
-            font-family: 'Hind Siliguri', sans-serif;
-            line-height: 1.8;
-            color: #333;
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-        }
-        .suseba-article h1 {
-            color: #1a73e8;
-            font-size: 32px;
-            text-align: center;
-            border-bottom: 3px solid #1a73e8;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-        .suseba-article h2 {
-            color: #2c3e50;
-            font-size: 26px;
-            background: #f8f9fa;
-            padding: 12px 18px;
-            border-left: 6px solid #1a73e8;
-            margin-top: 35px;
-            border-radius: 4px;
-        }
-        .suseba-article h3 {
-            color: #007bff;
-            font-size: 22px;
-            margin-top: 25px;
-        }
-        .internal-link-box {
-            background: #f0f8ff;
-            padding: 15px;
-            border-left: 5px solid #2196F3;
-            margin: 25px 0;
-            border-radius: 0 10px 10px 0;
-        }
-        
-        .app-promo-card {
-            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
-            padding: 35px;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid #bbdefb;
-            margin: 40px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        .download-button {
-            background: #1a73e8;
-            color: white !important;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 20px;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-        .download-button:hover {
-            background: #1557b0;
-            transform: scale(1.05);
-        }
-        .internal-link-section {
-    background-color: #f1f8ff; /* হালকা নীল ব্যাকগ্রাউন্ড */
-    border-left: 6px solid #1a73e8; /* বাম পাশে নীল বর্ডার */
-    padding: 20px;
-    margin: 25px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
+<title>ঘরে বসে ডাক্তারের সিরিয়াল দেয়ার সহজ উপায় | Suseba App</title>
 
-.link-header {
-    font-weight: bold;
-    color: #1a73e8;
-    margin-bottom: 15px !important;
-    font-size: 19px;
-}
+<meta name="description" content="ঘরে বসেই ডাক্তারের সিরিয়াল দিন Suseba অ্যাপ দিয়ে। অনলাইন ডাক্তার বুকিং, ভিডিও কনসাল্টেশন ও স্বাস্থ্যসেবা এখন আপনার হাতে।">
 
-.link-list {
-    list-style: none;
-    padding: 0 !important;
-    margin: 0 !important;
-}
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
 
-.link-list li {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px dashed #ced4da; /* প্রতিটির মাঝে হালকা ড্যাশ লাইন */
-}
+<style>
+body{margin:0;font-family:'Hind Siliguri',sans-serif;background:#f4f7fb;}
+.container{max-width:900px;margin:auto;background:#fff;padding:25px;border-radius:15px;box-shadow:0 5px 25px rgba(0,0,0,0.05);}
+h1{text-align:center;color:#1a73e8;font-size:32px;}
+p{font-size:17px;line-height:1.9;text-align:justify;}
+h2{margin-top:35px;background:#eef5ff;padding:12px;border-left:5px solid #1a73e8;border-radius:6px;}
+.card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 3px 15px rgba(0,0,0,0.05);margin:20px 0;}
+.internal{background:#f1f8ff;padding:20px;border-radius:10px;margin:25px 0;border-left:5px solid #1a73e8;}
+.internal a{display:block;padding:8px 0;color:#d32f2f;text-decoration:none;font-weight:600;}
+.internal a:hover{color:#1a73e8;}
+.btn{display:inline-block;padding:15px 30px;background:#1a73e8;color:#fff;text-decoration:none;border-radius:50px;margin-top:15px;}
+.promo{text-align:center;background:linear-gradient(135deg,#e3f2fd,#fff);padding:30px;border-radius:15px;margin:30px 0;}
+.hotline{text-align:center;background:#fff3cd;padding:25px;border-radius:12px;margin:30px 0;}
+.number{font-size:28px;font-weight:bold;}
+</style>
 
-.link-list li:last-child {
-    border-bottom: none; /* শেষেরটির নিচে লাইন থাকবে না */
-}
-
-.icon {
-    margin-right: 12px;
-    font-size: 18px;
-}
-
-.article-link {
-    color: #d32f2f; /* লিঙ্ক লাল রঙের */
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 17px;
-    transition: 0.3s;
-}
-
-.article-link:hover {
-    color: #1a73e8; /* মাউস নিলে নীল হবে */
-    text-decoration: underline;
-}
-        .hotline-container {
-            background: #fff3cd;
-            padding: 30px;
-            border: 2px dashed #ffeeba;
-            border-radius: 15px;
-            text-align: center;
-            margin: 35px 0;
-        }
-        .number-large {
-            font-size: 32px;
-            font-weight: bold;
-            color: #856404;
-            letter-spacing: 2px;
-        }
-        .info-p {
-            text-align: justify;
-            margin-bottom: 20px;
-            font-size: 17px;
-        }
-        .highlight-text {
-            color: #1a73e8;
-            font-weight: bold;
-        }
-    </style>
 </head>
+
 <body>
 
-<div class="suseba-article">
-    <h1>ঘরে বসে ডাক্তারের সিরিয়াল দেয়ার সহজ উপায় - সুসেবা (Suseba) অ্যাপ গাইড</h1>
+<div class="container">
 
-    <p class="info-p">স্বাস্থ্যই সকল সুখের মূল, কিন্তু অসুস্থ অবস্থায় হাসপাতালের বারান্দায় দীর্ঘ সময় লাইনে দাঁড়িয়ে থাকাটা অত্যন্ত কষ্টকর। ডিজিটাল বাংলাদেশের এই যুগে এখন আর ঘণ্টার পর ঘণ্টা অপেক্ষা করার প্রয়োজন নেই। প্রযুক্তি আমাদের হাতের মুঠোয় নিয়ে এসেছে বিশেষজ্ঞ ডাক্তারদের। আজ আমরা আলোচনা করব কীভাবে <strong>সুসেবা (Suseba)</strong> অ্যাপ ব্যবহার করে আপনি ঘরে বসেই নিশ্চিতভাবে ডাক্তারের সিরিয়াল দিতে পারেন এবং আপনার জীবনকে আরও সহজ করতে পারেন।</p>
+<h1>ঘরে বসে ডাক্তারের সিরিয়াল দেয়ার সহজ উপায়</h1>
 
-    <!-- উন্নত ইন্টারনাল লিঙ্কিং সেকশন -->
-<di<div class="internal-link-section">
-    <p class="link-header">👉 আরও পড়ুন আমাদের জনপ্রিয় আর্টিকেলগুলো:</p>
-    <ul class="link-list">
-        <li>
-            <span class="icon">🔗</span>
-            <a href="https://suseba.com/gastric-problem-solution.html" class="article-link">গ্যাস্ট্রিক সমস্যার সহজ সমাধান</a>
-        </li>
-        <li>
-            <span class="icon">🔗</span>
-            <a href="https://suseba.com/diabetics-tips.html" class="article-link">ডায়াবেটিস নিয়ন্ত্রণের কার্যকর উপায়</a>
-        </li>
-        <li>
-            <span class="icon">🔗</span>
-            <a href="https://suseba.com/pregnancy-food.html" class="article-link">গর্ভাবস্থায় পূর্ণাঙ্গ খাদ্য তালিকা ও সতর্কতা</a>
-        </li>
-        <li>
-            <span class="icon">🔗</span>
-            <a href="https://suseba.com/gyne-doctor-mymensingh.html" class="article-link">নরমাল ডেলিভারি গাইড ও টিপস</a>
-        </li>
-        <li>
-            <span class="icon">🔗</span>
-            <a href="https://suseba.com/high-blood-pressure-control.html" class="article-link">উচ্চ রক্তচাপ নিয়ন্ত্রণ গাইড</a>
-        </li>
-    </ul>
+<p>
+বর্তমান ডিজিটাল যুগে স্বাস্থ্যসেবা ব্যবস্থায় ব্যাপক পরিবর্তন এসেছে। আগে যেখানে একটি ভালো ডাক্তারের সিরিয়াল নিতে ঘন্টার পর ঘন্টা অপেক্ষা করতে হতো, এখন সেখানে মোবাইল অ্যাপের মাধ্যমে কয়েক মিনিটেই সহজে সিরিয়াল নেওয়া সম্ভব। বিশেষ করে যারা ব্যস্ত জীবনযাপন করেন, কর্মজীবী মানুষ, কিংবা দূরবর্তী এলাকা থেকে শহরে আসেন—তাদের জন্য এটি একটি আশীর্বাদ।
+</p>
+
+<p>
+বাংলাদেশে স্বাস্থ্যসেবাকে আরও সহজ করতে “Suseba App” একটি গুরুত্বপূর্ণ ভূমিকা পালন করছে। এই অ্যাপের মাধ্যমে রোগীরা ঘরে বসেই ডাক্তারের সিরিয়াল দিতে পারছেন, ভিডিও কলের মাধ্যমে পরামর্শ নিতে পারছেন এবং প্রয়োজনীয় স্বাস্থ্যসেবা পাচ্ছেন।
+</p>
+
+<!-- Internal Link -->
+<div class="internal">
+<strong>👉 আরও স্বাস্থ্য টিপস পড়ুন:</strong>
+<a href="https://suseba.com/gastric-problem-solution.html">গ্যাস্ট্রিক সমস্যার সমাধান</a>
+<a href="https://suseba.com/diabetics-tips.html">ডায়াবেটিস নিয়ন্ত্রণের উপায়</a>
+<a href="https://suseba.com/pregnancy-food.html">গর্ভাবস্থার খাদ্য তালিকা</a>
+<a href="https://suseba.com/high-blood-pressure-control.html">উচ্চ রক্তচাপ নিয়ন্ত্রণ</a>
 </div>
-    <h2>🔍 ১. বাংলাদেশে অনলাইন ডক্টর সিরিয়ালের প্রয়োজনীয়তা</h2>
-    <p class="info-p">আমাদের দেশে জনসংখ্যা অনুযায়ী ডাক্তারের সংখ্যা সীমিত। ফলে জনপ্রিয় ডাক্তারদের সিরিয়াল পেতে অনেক সময় কয়েক দিন আগে থেকে চেষ্টা করতে হয়। বিশেষ করে ময়মনসিংহ বা ঢাকার বাইরে থেকে আসা রোগীদের জন্য এটি একটি বড় সমস্যা। অনলাইনে সিরিয়াল দিলে আপনি আপনার সুবিধামতো সময় বেছে নিতে পারেন এবং যাতায়াতের খরচ ও সময় দুটোই বাঁচাতে পারেন।</p>
 
-    <h2>📱 ২. সুসেবা (Suseba) অ্যাপ কি এবং কেন এটি সেরা?</h2>
-    <p class="info-p">সুসেবা (Suseba) হলো একটি পূর্ণাঙ্গ <span class="highlight-text">Healthcare Service App</span>। এটি রোগীদের সাথে ডাক্তার এবং হাসপাতালের একটি ডিজিটাল সেতু তৈরি করে দেয়। সুসেবা অ্যাপের কিছু অনন্য বৈশিষ্ট্য হলো:</p>
-    <ul>
-        <li>সহজ ইউজার ইন্টারফেস যা যে কেউ ব্যবহার করতে পারে।</li>
-        <li>ডাক্তারের সঠিক সময় এবং ভিজিট ফি সম্পর্কে স্বচ্ছ ধারণা।</li>
-        <li>মেডিকেল রিপোর্ট আপলোড ও সংরক্ষণের সুবিধা।</li>
-        <li>হোম ডেলিভারির মাধ্যমে ঔষধ ও ল্যাব টেস্টের সুবিধা।</li>
-    </ul>
+<h2>📌 কেন অনলাইনে ডাক্তারের সিরিয়াল গুরুত্বপূর্ণ?</h2>
 
-    <div class="app-promo-card">
-        <h3>🚀 আজই সুসেবা অ্যাপ ডাউনলোড করুন!</h3>
-        <p>আপনার এবং আপনার পরিবারের সুস্বাস্থ্য নিশ্চিত করতে আমাদের অ্যাপটি প্লে-স্টোর থেকে নামিয়ে নিন।</p>
-        <a href="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" class="download-button">Suseba App Download</a>
-    </div>
+<p>
+বাংলাদেশের মতো জনবহুল দেশে ভালো ডাক্তারের সিরিয়াল পাওয়া অনেক সময় কঠিন হয়ে যায়। দীর্ঘ লাইনে দাঁড়ানো, সময় নষ্ট হওয়া এবং অনিশ্চয়তা—সব মিলিয়ে এটি একটি ঝামেলাপূর্ণ প্রক্রিয়া। অনলাইন সিরিয়াল সিস্টেম এই সমস্যাগুলো দূর করে।
+</p>
 
-    <h2>💡 ৩. ঘরে বসে সিরিয়াল দেওয়ার বিস্তারিত গাইড</h2>
-    <p class="info-p">সুসেবা অ্যাপের মাধ্যমে ডাক্তারের অ্যাপয়েন্টমেন্ট নেওয়া এখন মাত্র কয়েক মিনিটের ব্যাপার। নিচে ধাপে ধাপে পদ্ধতিটি দেওয়া হলো:</p>
+<div class="card">
+<ul>
+<li>লাইনে দাঁড়াতে হয় না</li>
+<li>আগে থেকেই সময় নির্ধারণ করা যায়</li>
+<li>যাতায়াত খরচ কমে</li>
+<li>দ্রুত চিকিৎসা পাওয়া যায়</li>
+</ul>
+</div>
 
-    <h3>✅ ধাপ ১: রেজিস্ট্রেশন সম্পন্ন করুন</h3>
-    <p class="info-p">প্লে-স্টোর থেকে অ্যাপটি ইনস্টল করার পর আপনার নাম এবং মোবাইল নম্বর দিয়ে অ্যাকাউন্ট খুলুন। ওটিপি (OTP) ভেরিফিকেশনের মাধ্যমে আপনার প্রোফাইলটি সুরক্ষিত করুন।</p>
+<h2>📱 Suseba App কি?</h2>
 
-    <h3>✅ ধাপ ২: স্পেশালিস্ট নির্বাচন করুন</h3>
-    <p class="info-p">আপনার রোগের ধরন অনুযায়ী ক্যাটাগরি বেছে নিন। যেমন- মেডিসিন, শিশু রোগ, গাইনি অথবা চর্মরোগ বিশেষজ্ঞ। সুসেবা অ্যাপে প্রত্যেক ডাক্তারের বিস্তারিত প্রোফাইল এবং অভিজ্ঞতা দেওয়া আছে।</p>
+<p>
+Suseba একটি আধুনিক স্বাস্থ্যসেবা প্ল্যাটফর্ম যা রোগী ও ডাক্তারের মধ্যে একটি ডিজিটাল সংযোগ তৈরি করে। এখানে আপনি সহজেই আপনার প্রয়োজন অনুযায়ী ডাক্তার খুঁজে নিতে পারবেন।
+</p>
 
-    <h3>✅ ধাপ ৩: পছন্দসই সময় বেছে নিন</h3>
-    <p class="info-p">ডাক্তারের ক্যালেন্ডার থেকে আপনার জন্য সুবিধাজনক তারিখ এবং সময় নির্বাচন করুন। বুকিং করার সাথে সাথে আপনার ফোনে কনফার্মেশন নোটিফিকেশন চলে আসবে।</p>
+<p>
+এই অ্যাপে বিভিন্ন ক্যাটাগরির ডাক্তার পাওয়া যায় যেমন—মেডিসিন, গাইনি, শিশু রোগ, চর্মরোগ, হার্ট স্পেশালিস্ট ইত্যাদি।
+</p>
 
-    <h2>🏥 ৪. ময়মনসিংহের রোগীদের জন্য বিশেষ সুবিধা</h2>
-    <p class="info-p">আপনি কি ময়মনসিংহে বসবাস করছেন? তবে সুসেবা আপনার জন্য হতে পারে সেরা সমাধান। ময়মনসিংহের স্বনামধন্য সব ক্লিনিক এবং হাসপাতালের ডাক্তারদের সিরিয়াল এখন আপনি বাড়ি থেকেই দিতে পারবেন। ময়মনসিংহের মেডিকেল কলেজ ও হাসপাতালের বিশেষজ্ঞ চিকিৎসকদের সাথে সরাসরি যোগাযোগ করার সুযোগ দিচ্ছে এই প্লাটফর্ম।</p>
+<div class="promo">
+<h2>🚀 এখনই অ্যাপ ডাউনলোড করুন</h2>
+<p>স্বাস্থ্যসেবা এখন আপনার হাতের মুঠোয়</p>
+<a href="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" class="btn">Download Now</a>
+</div>
 
-    <div class="hotline-container">
-        <h3>☎️ আমাদের সাথে সরাসরি যোগাযোগ করুন</h3>
-        <p>যেকোনো জিজ্ঞাসা বা সিরিয়াল বুকিংয়ে সমস্যার সমাধান পেতে কল করুন:</p>
-        <div class="number-large">01758-020057</div>
-        <p><i>(01758-020057)</i></p>
-    </div>
+<h2>💡 কিভাবে সিরিয়াল দেবেন?</h2>
 
-    <h2>🧪 ৫. শুধু সিরিয়াল নয়, আরও অনেক কিছু!</h2>
-    <p class="info-p">সুসেবা অ্যাপ শুধুমাত্র সিরিয়াল দেওয়ার মধ্যেই সীমাবদ্ধ নয়। এটি আপনার পুরো পরিবারের জন্য একটি ডিজিটাল হেলথকেয়ার ইকোসিস্টেম।</p>
-    <ul>
-        <li><strong>অনলাইন ভিডিও কনসাল্টেশন:</strong> জরুরি প্রয়োজনে ঘরে বসে ভিডিও কলের মাধ্যমে ডাক্তারের পরামর্শ নিতে পারেন।</li>
-        <li><strong>ঔষধ অর্ডার:</strong> আপনার প্রেসক্রিপশন আপলোড করে প্রয়োজনীয় ঔষধ হোম ডেলিভারি পান।</li>
-        <li><strong>নার্সিং সার্ভিস:</strong> বয়স্ক বা অপারেশন পরবর্তী রোগীদের জন্য দক্ষ নার্স বা কেয়ারগিভার বুক করার সুবিধা।</li>
-    </ul>
+<div class="card">
+<p><strong>ধাপ ১:</strong> অ্যাপ ইনস্টল ও রেজিস্ট্রেশন</p>
+<p><strong>ধাপ ২:</strong> ডাক্তার নির্বাচন</p>
+<p><strong>ধাপ ৩:</strong> সময় নির্বাচন</p>
+<p><strong>ধাপ ৪:</strong> বুকিং কনফার্ম</p>
+</div>
 
-    <h2>⚠️ সতর্কতা ও পরামর্শ</h2>
-    <p class="info-p">অনলাইনে সিরিয়াল দিলেও সবসময় সঠিক সময়ে চেম্বারে পৌঁছানোর চেষ্টা করুন। সিরিয়াল ক্যানসেল করতে চাইলে অন্তত ২ ঘণ্টা আগে অ্যাপের মাধ্যমে জানিয়ে দিন। মনে রাখবেন, সুসেবা একটি মাধ্যম মাত্র; জরুরি প্রাণঘাতী অবস্থায় সরাসরি নিকটস্থ হাসপাতালের জরুরি বিভাগে যোগাযোগ করুন।</p>
+<h2>🏥 ময়মনসিংহ অঞ্চলের রোগীদের জন্য সুবিধা</h2>
 
-    <footer style="margin-top: 50px; border-top: 1px solid #ddd; padding-top: 20px;">
-        <p><strong>ট্যাগ:</strong> #Suseba #OnlineDoctorAppointment #HealthTips #BangladeshHealthcare #MymensinghDoctorList #ডিজিটাল_স্বাস্থ্যসেবা</p>
-    </footer>
+<p>
+ময়মনসিংহ অঞ্চলের রোগীদের জন্য এই অ্যাপটি বিশেষভাবে উপকারী। কারণ এখানে অনেক বিশেষজ্ঞ ডাক্তার রয়েছেন যাদের সিরিয়াল পাওয়া কঠিন।
+</p>
+
+<p>
+Suseba অ্যাপ ব্যবহার করে আপনি সহজেই এসব ডাক্তারের সিরিয়াল নিতে পারবেন এবং সময় বাঁচাতে পারবেন।
+</p>
+
+<h2>🧪 অতিরিক্ত সুবিধা</h2>
+
+<div class="card">
+<ul>
+<li>ভিডিও কনসাল্টেশন</li>
+<li>ঔষধ হোম ডেলিভারি</li>
+<li>নার্সিং সার্ভিস</li>
+<li>ল্যাব টেস্ট বুকিং</li>
+</ul>
+</div>
+
+<h2>⚠️ গুরুত্বপূর্ণ পরামর্শ</h2>
+
+<p>
+অনলাইনে সিরিয়াল নেওয়ার পর অবশ্যই নির্ধারিত সময়ে উপস্থিত থাকুন। জরুরি অবস্থায় সরাসরি হাসপাতালে যান।
+</p>
+
+<p>
+সঠিক চিকিৎসার জন্য সবসময় বিশ্বস্ত অ্যাপ ব্যবহার করুন এবং ডাক্তারের পরামর্শ মেনে চলুন।
+</p>
+
+<div class="hotline">
+<h3>☎️ সাহায্য দরকার?</h3>
+<p>কল করুন</p>
+<div class="number">01758-020057</div>
+</div>
+
 </div>
 
 </body>

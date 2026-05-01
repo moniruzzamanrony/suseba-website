@@ -1,216 +1,317 @@
-<!DOCTYPE html><html lang="bn">
+<!DOCTYPE html>
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ময়মনসিংহ স্কিন স্পেশালিস্ট ডাক্তার ও স্কিন কেয়ার গাইড | Premium Medical UI</title><meta name="description" content="ময়মনসিংহের সেরা চর্ম ও যৌন রোগ বিশেষজ্ঞ ডাক্তার তালিকা, সম্পূর্ণ স্কিন কেয়ার গাইড, ঘরোয়া চিকিৎসা, SEO আর্টিকেল এবং সুসেবা অ্যাপ সুবিধা।"><style>
-:root{
-    --bg:#070b14;
-    --panel:#0f172a;
-    --card:rgba(255,255,255,0.06);
-    --border:rgba(255,255,255,0.12);
-    --text:#e5e7eb;
-    --muted:#9ca3af;
-    --primary:#38bdf8;
-    --green:#22c55e;
-    --red:#ef4444;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ময়মনসিংহ চর্মরোগ বিশেষজ্ঞ তালিকা</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0062ff;
+            --secondary-color: #28a745;
+            --bg-color: #f0f4f8;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
 
-*{box-sizing:border-box}
-body{
-    margin:0;
-    font-family:system-ui,Arial;
-    background:radial-gradient(circle at top,#0b1220,#050814);
-    color:var(--text);
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
 
-header{
-    padding:50px 20px;
-    text-align:center;
-    background:linear-gradient(135deg,rgba(56,189,248,0.15),rgba(34,197,94,0.10));
-    border-bottom:1px solid var(--border);
-}
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-header h1{margin:0;font-size:30px}
-header p{color:var(--muted)}
+        /* Navigation */
+        nav {
+            background: var(--primary-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-.container{
-    width:92%;
-    max-width:1100px;
-    margin:auto;
-    padding:25px 0;
-}
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
 
-.card{
-    background:var(--card);
-    border:1px solid var(--border);
-    padding:22px;
-    margin:18px 0;
-    border-radius:18px;
-    backdrop-filter:blur(12px);
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
 
-.section-title{
-    color:var(--primary);
-    font-size:20px;
-    margin-bottom:12px;
-}
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #0062ff, #00d2ff);
+            color: white;
+        }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:15px;
-}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-.doctor{
-    background:rgba(0,0,0,0.25);
-    border:1px solid var(--border);
-    padding:16px;
-    border-radius:14px;
-    transition:0.3s;
-}
+        /* Doctor Grid */
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
 
-.doctor:hover{
-    transform:translateY(-5px);
-    border-color:var(--primary);
-}
+        .doctor-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
 
-.label{color:var(--muted);font-weight:600}
-.hotline{color:var(--red);font-weight:700}
-.tag{
-    display:inline-block;
-    background:rgba(56,189,248,0.12);
-    padding:6px 10px;
-    border-radius:8px;
-    margin:4px;
-    font-size:12px;
-    border:1px solid rgba(56,189,248,0.25);
-}
+        .doctor-card:hover {
+            transform: translateY(-10px);
+        }
 
-input{
-    width:100%;
-    padding:12px;
-    border-radius:10px;
-    border:1px solid var(--border);
-    background:#0b1220;
-    color:white;
-    margin-bottom:10px;
-}
+        .doctor-card h2 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
 
-.btn{
-    display:inline-block;
-    padding:12px 18px;
-    background:linear-gradient(135deg,#22c55e,#16a34a);
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:700;
-}
+        .specialty {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+        }
 
-p{line-height:1.8;color:var(--text)}
-a{color:var(--primary)}
-.footer{
-    text-align:center;
-    padding:25px;
-    color:var(--muted);
-    border-top:1px solid var(--border);
-}
-</style></head><body><header>
-<h1>🧴 স্কিন কেয়ার + ময়মনসিংহ ডাক্তার ডিরেক্টরি</h1>
-<p>চর্ম, ব্রণ, অ্যালার্জি ও যৌন রোগের সম্পূর্ণ প্রিমিয়াম মেডিকেল গাইড</p>
-</header><div class="container"><div class="card">
-<h2 class="section-title">📌 স্কিন কেয়ার কেন গুরুত্বপূর্ণ (Full Guide)</h2>
-<p>
-ত্বক আমাদের শরীরের সবচেয়ে বড় অঙ্গ। দূষণ, সূর্যের রশ্মি, হরমোন পরিবর্তন, মানসিক চাপ এবং অস্বাস্থ্যকর খাবারের কারণে ব্রণ, দাগ, ফাঙ্গাল ইনফেকশন এবং অ্যালার্জি দেখা দেয়।
-যদি নিয়মিত স্কিন কেয়ার করা না হয় তাহলে সমস্যা দীর্ঘমেয়াদী হয়ে যায় এবং চিকিৎসা কঠিন হয়ে পড়ে।
-</p><p>
-বিশেষজ্ঞদের মতে প্রতিদিন স্কিন ক্লিনিং, ময়েশ্চারাইজিং এবং সানস্ক্রিন ব্যবহার করলে ৭০% পর্যন্ত স্কিন সমস্যা কমানো সম্ভব।
-</p><div>
-<span class="tag">skin care bangladesh</span>
-<span class="tag">acne treatment</span>
-<span class="tag">dermatology guide</span>
+        .info-row {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .info-row span {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .visit-fee {
+            display: inline-block;
+            background: #e7f0ff;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn-call {
+            display: block;
+            text-align: center;
+            background: var(--secondary-color);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-call:hover {
+            background: #218838;
+        }
+
+        /* App Promotion */
+        .app-promo {
+            background: #fff;
+            margin-top: 50px;
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .app-text h2 { color: var(--primary-color); margin-bottom: 15px; }
+
+        .download-btns img {
+            height: 45px;
+            margin-right: 10px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        /* Article Section */
+        #about-skin {
+            background: white;
+            padding: 40px;
+            margin-top: 40px;
+            border-radius: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            background: #333;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .app-promo { text-align: center; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#doctors">ডাক্তার তালিকা</a></li>
+        <li><a href="#about-skin">টিপস</a></li>
+        <li><a href="#app">অ্যাপ ডাউনলোড</a></li>
+    </ul>
+</nav>
+
+<header class="header">
+    <h1>ময়মনসিংহের সেরা চর্ম ও যৌন রোগ বিশেষজ্ঞ</h1>
+    <p>আপনার ত্বকের যত্নে সেরা চিকিৎসকের পরামর্শ নিন সহজেই</p>
+</header>
+
+<div class="container">
+
+    <section id="doctors">
+        <div class="doctor-grid">
+            
+            <!-- Doctor 1 -->
+            <div class="doctor-card">
+                <h2>অধ্যাপক ডাঃ অসীম কুমার নন্দী</h2>
+                <span class="specialty">চর্ম, যৌন, ডার্মাটোসার্জারী ও লেজার বিশেষজ্ঞ</span>
+                <div class="info-row"><span>চেম্বার:</span> ল্যাবএইড লিঃ (ডায়াগনস্টিকস), ময়মনসিংহ।</div>
+                <div class="info-row"><span>সময়:</span> শনি - বৃহস্পতি (বিকাল ৩ - ৫)</div>
+                <div class="visit-fee">ফি: ১০০০ টাকা</div>
+                <a href="tel:01758020057" class="btn-call">সিরিয়াল দিন: 01758020057</a>
+            </div>
+
+            <!-- Doctor 2 -->
+            <div class="doctor-card">
+                <h2>ডাঃ মোঃ জামাল উদ্দিন</h2>
+                <span class="specialty">সহযোগী অধ্যাপক, স্কিন ও লেজার সার্জন</span>
+                <div class="info-row"><span>চেম্বার:</span> মেমোরিয়াল ডায়াগনস্টিক সেন্টার, ময়মনসিংহ।</div>
+                <div class="info-row"><span>সময়:</span> শনি - বৃহস্পতি (বিকাল ৩ - রাত ৯)</div>
+                <div class="visit-fee">ফি: ১০০০ টাকা</div>
+                <a href="tel:01758020057" class="btn-call">সিরিয়াল দিন: 01758020057</a>
+            </div>
+
+            <!-- Doctor 3 -->
+            <div class="doctor-card">
+                <h2>প্রফেসর ডাঃ হাসিবুর রহমান</h2>
+                <span class="specialty">লেজার ও কসমেটিকস বিশেষজ্ঞ (এভারকেয়ার হাসপাতাল)</span>
+                <div class="info-row"><span>চেম্বার:</span> নেক্সাস কার্ডিয়াক হাসপাতাল।</div>
+                <div class="info-row"><span>সময়:</span> সোম, মঙ্গল ও বুধ (বিকাল ৫ - রাত ১০)</div>
+                <div class="visit-fee">ফি: ১০০০ টাকা</div>
+                <a href="tel:01758020057" class="btn-call">সিরিয়াল দিন: 01758020057</a>
+            </div>
+
+            <!-- Doctor 4 -->
+            <div class="doctor-card">
+                <h2>ডাঃ মোঃ মোস্তাফা কামাল</h2>
+                <span class="specialty">ফেলো জেনিটো ইউরিনারী মেডিসিন (লন্ডন)</span>
+                <div class="info-row"><span>চেম্বার:</span> স্বর্ণালী ডায়াগনস্টিক সেন্টার।</div>
+                <div class="info-row"><span>সময়:</span> শনি, রবি, সোম ও বুধ (বিকাল ৩ - রাত ৮)</div>
+                <div class="visit-fee">ফি: ৮০০ টাকা</div>
+                <a href="tel:01758020057" class="btn-call">সিরিয়াল দিন: 01758020057</a>
+            </div>
+
+            <!-- Doctor 5 -->
+            <div class="doctor-card">
+                <h2>অধ্যাপক ডাঃ মোঃ ফসিউর রহমান</h2>
+                <span class="specialty">বিভাগীয় প্রধান, প্রেসিডেন্ট আব্দুল হামিদ মেডিকেল কলেজ</span>
+                <div class="info-row"><span>চেম্বার:</span> পপুলার ডায়াগনস্টিক সেন্টার লিঃ।</div>
+                <div class="info-row"><span>সময়:</span> শুধুমাত্র বুধবার (দুপুর ১১ - বিকাল ৩)</div>
+                <div class="visit-fee">ফি: ৮০০ টাকা</div>
+                <a href="tel:01758020057" class="btn-call">সিরিয়াল দিন: 01758020057</a>
+            </div>
+
+            <!-- Doctor 6 -->
+            <div class="doctor-card">
+                <h2>ডাঃ মোঃ মাহমুদুল আলম</h2>
+                <span class="specialty">চর্ম, যৌন, ডার্মাটোসার্জারী ও বন্ধ্যাত্ব বিশেষজ্ঞ</span>
+                <div class="info-row"><span>চেম্বার:</span> ল্যাব সেন্টার, ময়মনসিংহ।</div>
+                <div class="info-row"><span>সময়:</span> শনি, রবি, সোম ও বৃহস্পতি (দুপুর ২:৩০ - রাত ৯)</div>
+                <div class="visit-fee">ফি: ৭০০ টাকা</div>
+                <a href="tel:01758020057" class="btn-call">সিরিয়াল দিন: 01758020057</a>
+            </div>
+
+            <!-- Doctor 7 -->
+            <div class="doctor-card">
+                <h2>ডাঃ আতিয়া শারমীন (শিমু)</h2>
+                <span class="specialty">কনসালটেন্ট (সিবিএমসি), চর্ম ও যৌন রোগ বিশেষজ্ঞ</span>
+                <div class="info-row"><span>চেম্বার:</span> পপুলার ডায়াগনস্টিক সেন্টার লিঃ।</div>
+                <div class="info-row"><span>সময়:</span> প্রতিদিন (বিকাল ৪ - রাত ৮), শুক্রবার বন্ধ</div>
+                <div class="visit-fee">ফি: ৭০০ টাকা</div>
+                <a href="tel:01758020057" class="btn-call">সিরিয়াল দিন: 01758020057</a>
+            </div>
+
+            <!-- Doctor 8 -->
+            <div class="doctor-card">
+                <h2>ডাঃ আশরাফুন নেসা (রক্সি)</h2>
+                <span class="specialty">চর্ম ও যৌন রোগ বিশেষজ্ঞ</span>
+                <div class="info-row"><span>চেম্বার:</span> মেমোরিয়াল স্পেশালাইজড হসপিটাল।</div>
+                <div class="info-row"><span>সময়:</span> প্রতিদিন (বিকাল ৩ - রাত ৮), শুক্রবার বন্ধ</div>
+                <div class="visit-fee">ফি: ৭০০ টাকা</div>
+                <a href="tel:01758020057" class="btn-call">সিরিয়াল দিন: 01758020057</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Article Section -->
+    <section id="about-skin">
+        <h2 style="color:var(--primary-color); margin-bottom:15px;">ত্বকের যত্নে সচেতনতা</h2>
+        <p>ত্বক আমাদের শরীরের রোগ প্রতিরোধের প্রথম ধাপ। ময়মনসিংহে অবস্থিত এই বিশেষজ্ঞ চিকিৎসকরা আধুনিক লেজার সার্জারি, বন্ধ্যাত্ব চিকিৎসা এবং চর্মরোগের উন্নত সেবা প্রদান করছেন। ত্বকের যে কোনো সমস্যায় নিজে থেকে ঔষধ ব্যবহার না করে বিশেষজ্ঞের পরামর্শ নেওয়া জরুরি।</p>
+        <ul style="margin-left: 20px; margin-top: 15px;">
+            <li>অতিরিক্ত রোদে বের হওয়ার সময় সানস্ক্রিন ব্যবহার করুন।</li>
+            <li>ত্বকের ধরন বুঝে প্রসাধন সামগ্রী নির্বাচন করুন।</li>
+            <li>যৌন ও চর্মরোগের সঠিক সময়ে চিকিৎসা নিলে জটিলতা এড়ানো সম্ভব।</li>
+        </ul>
+    </section>
+
+    <!-- App Promotion Section -->
+    <section id="app" class="app-promo">
+        <div class="app-text">
+            <h2>আমাদের হেলথ অ্যাপ ডাউনলোড করুন</h2>
+            <p>সহজেই ডাক্তার খুঁজুন এবং ঘরে বসে সিরিয়াল বুক করুন।</p>
+            <div class="download-btns">
+                <img src="https://wikimedia.org" alt="Play Store">
+                <img src="https://wikimedia.org" alt="App Store">
+            </div>
+        </div>
+        <div class="app-image">
+            <h1 style="font-size: 80px; color: #ddd;">📱</h1>
+        </div>
+    </section>
+
 </div>
-</div><div class="card">
-<h2 class="section-title">🏠 ঘরোয়া স্কিন কেয়ার</h2>
-<ul>
-<li>দিনে ২ বার ফেসওয়াশ ব্যবহার</li>
-<li>অ্যালোভেরা জেল ব্যবহার</li>
-<li>হলুদ + মধু ফেস মাস্ক</li>
-<li>পর্যাপ্ত পানি পান</li>
-<li>তেল ও ফাস্টফুড কমানো</li>
-</ul>
-</div><div class="card">
-<h2 class="section-title">🔎 ডাক্তার খুঁজুন</h2>
-<input type="text" placeholder="ডাক্তার নাম সার্চ করুন... (UI demo)">
-</div><div class="card">
-<h2 class="section-title">👨‍⚕️ ময়মনসিংহ স্কিন স্পেশালিস্ট ডাক্তার তালিকা</h2><div class="grid"><div class="doctor">
-<h3>অধ্যাপক ডাঃ অসীম কুমার নন্দী</h3>
-<p><span class="label">চেম্বার:</span> ল্যাবএইড</p>
-<p><span class="label">সময়:</span> ৩–৫টা</p>
-<p><span class="label">বিশেষত্ব:</span> চর্ম ও লেজার</p>
-<p><span class="label">পড়াশোনা:</span> MD Dermatology</p>
-<p class="hotline">📞 01758020057</p>
-</div><div class="doctor">
-<h3>ডাঃ মোঃ জামাল উদ্দিন</h3>
-<p><span class="label">চেম্বার:</span> মেমোরিয়াল</p>
-<p><span class="label">সময়:</span> ৩–৯টা</p>
-<p><span class="label">বিশেষত্ব:</span> স্কিন সার্জন</p>
-<p class="hotline">📞 01758020057</p>
-</div><div class="doctor">
-<h3>প্রফেসর ডাঃ হাসিবুর রহমান</h3>
-<p><span class="label">চেম্বার:</span> নেক্সাস</p>
-<p><span class="label">সময়:</span> ৫–১০টা</p>
-<p><span class="label">বিশেষত্ব:</span> কসমেটিক ডার্মাটোলজি</p>
-<p class="hotline">📞 01758020057</p>
-</div><div class="doctor">
-<h3>ডাঃ মোঃ মোস্তাফা কামাল</h3>
-<p><span class="label">চেম্বার:</span> স্বর্ণালী</p>
-<p><span class="label">সময়:</span> শনি–বুধ</p>
-<p><span class="label">বিশেষত্ব:</span> ইউরোলজি + স্কিন</p>
-<p class="hotline">📞 01758020057</p>
-</div><div class="doctor">
-<h3>অধ্যাপক ডাঃ মোঃ ফসিউর রহমান</h3>
-<p><span class="label">চেম্বার:</span> পপুলার</p>
-<p><span class="label">সময়:</span> বুধবার</p>
-<p><span class="label">বিশেষত্ব:</span> সিনিয়র ডার্মাটোলজি</p>
-<p class="hotline">📞 01758020057</p>
-</div><div class="doctor">
-<h3>ডাঃ মোঃ মাহমুদুল আলম</h3>
-<p><span class="label">চেম্বার:</span> ল্যাব সেন্টার</p>
-<p><span class="label">সময়:</span> শনি–সোম</p>
-<p><span class="label">বিশেষত্ব:</span> চর্ম ও যৌন রোগ</p>
-<p class="hotline">📞 01758020057</p>
-</div><div class="doctor">
-<h3>ডাঃ আতিয়া শারমীন</h3>
-<p><span class="label">চেম্বার:</span> পপুলার</p>
-<p><span class="label">সময়:</span> ৪–৮টা</p>
-<p><span class="label">বিশেষত্ব:</span> স্কিন অ্যালার্জি</p>
-<p class="hotline">📞 01758020057</p>
-</div><div class="doctor">
-<h3>ডাঃ আশরাফুন নেসা</h3>
-<p><span class="label">চেম্বার:</span> মেমোরিয়াল</p>
-<p><span class="label">সময়:</span> ৩–৮টা</p>
-<p><span class="label">বিশেষত্ব:</span> ডার্মাটোলজি</p>
-<p class="hotline">📞 01758020057</p>
-</div></div>
-</div><div class="card">
-<h2 class="section-title">📱 সুসেবা অ্যাপ</h2>
-<p>
-সুসেবা অ্যাপ ব্যবহার করলে আপনি প্রতিদিন আপডেট ডাক্তার তথ্য, স্কিন গাইড এবং দ্রুত সিরিয়াল বুকিং সুবিধা পাবেন। এটি স্বাস্থ্য সেবাকে আরও সহজ করে।
-</p><ul>
-<li>✔ অনলাইন সিরিয়াল বুকিং</li>
-<li>✔ ডাক্তার আপডেট</li>
-<li>✔ স্কিন গাইড</li>
-<li>✔ দ্রুত সাপোর্ট</li>
-</ul><a class="btn" href="#">📲 Download App</a>
 
-</div><div class="card">
-<h2 class="section-title">🔗 আরও আর্টিকেল</h2>
-<ul>
-<li><a href="#">ব্রণ দূর করার উপায়</a></li>
-<li><a href="#">চর্ম রোগ চিকিৎসা</a></li>
-<li><a href="#">স্কিন হোয়াইটেনিং টিপস</a></li>
-</ul>
-</div></div><div class="footer">
-© 2026 Premium Medical Directory UI
-</div></body>
-</html>here
+<footer>
+    <p>&copy; ২০২৪ ময়মনসিংহ ডাক্তার গাইড। সর্বস্বত্ব সংরক্ষিত। <br> হটলাইন: 01758-020057</p>
+</footer>
 
+</body>
+</html>

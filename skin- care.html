@@ -63,6 +63,67 @@
             margin: 0 auto;
             padding: 20px;
         }
+        /* আরো পড়ুন সেকশনের স্টাইল */
+    .read-more-container {
+        background: #ffffff;
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 12px;
+        border-left: 5px solid #0062ff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .read-more-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .read-more-title::before {
+        content: "📚";
+        margin-right: 10px;
+    }
+
+    .internal-links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 12px;
+    }
+
+    .internal-link-card {
+        display: flex;
+        align-items: center;
+        background: #f8f9fa;
+        padding: 12px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #444;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 1px solid #eee;
+    }
+
+    .internal-link-card:hover {
+        background: #0062ff;
+        color: #ffffff;
+        transform: translateX(5px);
+        border-color: #0062ff;
+    }
+
+    .internal-link-card i {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    /* মোবাইল রেসপনসিভ */
+    @media (max-width: 600px) {
+        .read-more-container {
+            padding: 15px;
+        }
+    }
 
         /* Doctor Grid */
         .doctor-grid {
@@ -291,6 +352,39 @@
             <li>যৌন ও চর্মরোগের সঠিক সময়ে চিকিৎসা নিলে জটিলতা এড়ানো সম্ভব।</li>
         </ul>
     </section>
+    <div class="read-more-container">
+    <div class="read-more-title">আপনার জন্য আরও কিছু প্রয়োজনীয় তথ্য:</div>
+    
+    <div class="internal-links-grid">
+        <a href="https://suseba.com/gastric-problem-solution.html" class="internal-link-card">
+            👉 গ্যাস্ট্রিক সমস্যার সমাধান
+        </a>
+        
+        <a href="https://suseba.com/diabetics-tips.html" class="internal-link-card">
+            👉 ডায়াবেটিস নিয়ন্ত্রণের সহজ উপায়
+        </a>
+        
+        <a href="https://suseba.com/pregnancy-food.html" class="internal-link-card">
+            👉 গর্ভাবস্থায় পূর্ণাঙ্গ খাদ্য তালিকা
+        </a>
+        
+        <a href="https://suseba.com/gyne-doctor-mymensingh.html" class="internal-link-card">
+            👉 নরমাল ডেলিভারি গাইড
+        </a>
+        
+        <a href="https://suseba.com/high-blood-pressure-control.html" class="internal-link-card">
+            👉 উচ্চ রক্তচাপ নিয়ন্ত্রণ গাইড
+        </a>
+        
+        <a href="https://suseba.com/weight-loss-plan.html" class="internal-link-card">
+            👉 ওজন কমানোর কার্যকরী প্ল্যান
+        </a>
+
+        <a href="https://suseba.com/doctor-serial-online.html" class="internal-link-card">
+            👉 অনলাইনে ডাক্তারের সিরিয়াল দেয়ার উপায়
+        </a>
+    </div>
+</div>
 
     <!-- App Promotion Section -->
     <section id="app" class="app-promo">
@@ -298,8 +392,8 @@
             <h2>আমাদের হেলথ অ্যাপ ডাউনলোড করুন</h2>
             <p>সহজেই ডাক্তার খুঁজুন এবং ঘরে বসে সিরিয়াল বুক করুন।</p>
             <div class="download-btns">
-                <img src="https://wikimedia.org" alt="Play Store">
-                <img src="https://wikimedia.org" alt="App Store">
+                <img src="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" alt="Play Store">
+                <img src="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" alt="App Store">
             </div>
         </div>
         <div class="app-image">

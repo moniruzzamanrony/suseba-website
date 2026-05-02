@@ -1,436 +1,247 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উচ্চ রক্তচাপ নিয়ন্ত্রণ ও বিশেষজ্ঞ গাইড | Health Portal</title>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+        }
 
-<title>উচ্চ রক্তচাপ নিয়ন্ত্রণ গাইড | হাই ব্লাড প্রেসার কমানোর উপায়</title>
+        body {
+            font-family: 'SolaimanLipi', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
 
-<meta name="description" content="উচ্চ রক্তচাপ নিয়ন্ত্রণের সম্পূর্ণ গাইড, খাবার তালিকা, ঘরোয়া উপায় ও লাইফস্টাইল পরিবর্তন। হাই ব্লাড প্রেসার কমানোর সহজ পদ্ধতি।">
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 15px;
+        }
 
-<meta name="keywords" content="
-উচ্চ রক্তচাপ নিয়ন্ত্রণ, high blood pressure control bangla, হাই প্রেসার কমানোর উপায়, রক্তচাপ নিয়ন্ত্রণের খাবার, hypertension diet bangla, blood pressure control tips, bp control natural way, উচ্চ রক্তচাপ ডায়েট চার্ট
-">
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: var(--primary-color); font-size: 32px; border-bottom: 3px solid var(--primary-color); display: inline-block; padding-bottom: 10px; }
+        h2 { color: var(--secondary-color); border-left: 5px solid var(--primary-color); padding-left: 15px; margin-top: 40px; }
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+        .content-section { margin-bottom: 30px; text-align: justify; }
 
-<style>
-body{
-    font-family:'Noto Sans Bengali', sans-serif;
-    background:linear-gradient(135deg,#eef2f3,#dfe9f3);
-    margin:0;
-}
+        .todo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            background: #fff5f5;
+            padding: 25px;
+            border-radius: 10px;
+        }
 
-.container{
-    max-width:900px;
-    margin:30px auto;
-    background:#fff;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,0.1);
-}
-
-h1{
-    text-align:center;
-    color:#2c3e50;
-    border-bottom:3px solid #e74c3c;
-    padding-bottom:15px;
-}
-
-h2{
-    color:#e74c3c;
-    margin-top:30px;
-    border-left:6px solid #e74c3c;
-    padding-left:12px;
-}
-
-p{
-    line-height:1.9;
-    color:#333;
-    text-align:left;
-}
-
-ul{
-    padding-left:20px;
-}
-
-li{
-    margin-bottom:8px;
-}
-
-.box{
-    background:#fdecea;
-    padding:20px;
-    border-left:6px solid #e74c3c;
-    border-radius:10px;
-    margin:20px 0;
-}
-
-/* কন্টেইনার সেটআপ */
-#doctors {
-    padding: 20px 10px;
-    background-color: #fcfcfc;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.doctor-grid {
-    display: flex;
-    flex-direction: column; /* মোবাইলের জন্য একটার নিচে একটা */
-    gap: 15px;
-    max-width: 800px; /* পড়ার সুবিধার জন্য উইডথ সীমিত করা */
-    margin: 0 auto;
-}
-
-/* কার্ডের মূল ডিজাইন */
-.doctor-card {
-    background: #fff;
-    border-left: 6px solid #e74c3c; /* বাম পাশে মোটা লাল দাগ */
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* স্মুথ ট্রানজিশন */
-    text-align: left;
-    position: relative;
-}
-
-/* হোভার ইফেক্ট - যা আপনি চাচ্ছিলেন */
-.doctor-card:hover {
-    transform: translateX(8px); /* হোভার করলে হালকা ডান দিকে সরবে */
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-    border-left-color: #27ae60; /* হোভার করলে লাল বর্ডার সবুজ হবে */
-}
-
-/* টেক্সট স্টাইল */
-.doctor-card h2 {
-    margin: 0 0 8px 0;
-    color: #2c3e50;
-    font-size: 20px;
-    line-height: 1.3;
-}
-
-.specialty {
-    display: block;
-    color: #555;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.info-row {
-    margin: 4px 0;
-    color: #666;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-/* কল বাটনের ডিজাইন */
-.btn-call {
-    display: inline-block;
-    margin-top: 12px;
-    color: #0000ee; /* ছবির মতো নীল রঙ */
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.btn-call:hover {
-    color: #d9534f;
-}
-
-    /* পুরো সেকশনের ফন্ট এবং ডিজাইন ঠিক করার জন্য */
-#doctors {
-    font-family: 'Noto Sans Bengali', Tahoma, Geneva, Verdana, sans-serif; /* সুন্দর ফন্ট */
-    padding: 20px;
-    background-color: #fff;
-}
-
-.doctor-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* কার্ডগুলো অটো সাজাবে */
-    gap: 20px;
-}
-
-.doctor-card {
-    border-left: 5px solid #d9534f; /* ছবির মতো বাম পাশে লাল দাগ */
-    padding: 15px;
-    background: #f9f9f9;
-    margin-bottom: 20px;
-    text-align: left; /* লেখাগুলো বাম দিক থেকে শুরু হবে */
-}
-
-.doctor-card h2 {
-    color: #333;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.doctor-card .specialty {
-    display: block;
-    color: #555;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.doctor-card .info-row {
-    margin: 5px 0;
-    color: #444;
-}
-
-.visit-fee {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.btn-call {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #d9534f;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-/* Doctor Grid */
         .doctor-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
 
         .doctor-card {
-            background: var(--card-bg);
-            border-radius: 15px;
+            background: #ffffff;
+            border: 1px solid #eee;
             padding: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            border-top: 5px solid var(--primary-color);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            position: relative;
+            border-top: 4px solid var(--secondary-color);
         }
 
-        .doctor-card:hover {
-            transform: translateY(-10px);
+        .doctor-name { font-size: 1.2em; font-weight: bold; color: var(--secondary-color); margin-bottom: 5px; display: block; }
+        .visiting-time { color: #555; font-size: 0.95em; margin: 10px 0; display: block; background: #e9ecef; padding: 5px 10px; border-radius: 5px; }
+        
+        .hotline-btn {
+            display: block;
+            text-align: center;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .hotline-btn:hover { background: #c1272d; }
+
+        .internal-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        .doctor-card h2 {
-            color: var(--primary-color);
-            font-size: 20px;
-            margin-bottom: 10px;
+        .internal-links a {
+            background: #f1f3f5;
+            color: var(--secondary-color);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid #dee2e6;
         }
 
-.tip{
-    background:#e8f5e9;
-    border-left:6px solid #27ae60;
-}
+        .app-cta {
+            background: linear-gradient(135deg, #1d3557 0%, #457b9d 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 50px;
+        }
 
-.btn{
-    display:inline-block;
-    background:#1976d2;
-    color:#fff;
-    padding:15px 30px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-}
-</style>
+        .download-buttons {
+            margin-top: 25px;
+        }
 
+        .dl-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #1d3557;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .todo-grid { grid-template-columns: 1fr; }
+            .container { padding: 20px; }
+        }
+    </style>
 </head>
-
 <body>
 
 <div class="container">
+    <header>
+        <h1>উচ্চ রক্তচাপ: একটি নীরব ঘাতক ও এর স্থায়ী সমাধান</h1>
+    </header>
 
-<h1>উচ্চ রক্তচাপ নিয়ন্ত্রণ গাইড – সম্পূর্ণ বিস্তারিত তথ্য</h1>
+    <div class="content-section">
+        <h2>উচ্চ রক্তচাপ বা হাইপারটেনশন আসলে কী?</h2>
+        <p>উচ্চ রক্তচাপ এমন একটি অবস্থা যেখানে ধমনীর দেয়ালে রক্তের চাপ দীর্ঘ সময় ধরে স্বাভাবিকের চেয়ে বেশি থাকে। চিকিৎসাবিজ্ঞানের ভাষায় একে বলা হয় সাইলেন্ট কিলার। কারণ অনেক সময় কোনো বিশেষ লক্ষণ ছাড়াই এটি শরীরকে তিলে তিলে শেষ করে দেয়। যখন সিস্টোলিক রক্তচাপ ১৪০ মি.মি. পারদ বা তার বেশি এবং ডায়াস্টোলিক রক্তচাপ ৯০ মি.মি. পারদ বা তার বেশি থাকে, তখন তাকে উচ্চ রক্তচাপ বলা হয়। </p>
+        
+        <p>দীর্ঘদিন ধরে এই সমস্যা থাকলে হৃদপিণ্ডের পেশি দুর্বল হয়ে যায়, কিডনি বিকল হতে পারে এবং মস্তিষ্কে রক্তক্ষরণ বা স্ট্রোকের ঝুঁকি বহুগুণ বেড়ে যায়। আধুনিক যুগে অনিয়ন্ত্রিত জীবনযাপন, অতিরিক্ত লবন গ্রহণ এবং মানসিক চাপ এর প্রধান কারণ।</p>
+    </div>
 
-<p>
-উচ্চ রক্তচাপ বা হাই ব্লাড প্রেসার একটি নীরব কিন্তু বিপজ্জনক রোগ। এটি শরীরের ধমনীতে রক্তের চাপ স্বাভাবিকের চেয়ে বেশি হয়ে গেলে ঘটে। অনেক সময় মানুষ বুঝতেই পারে না যে তার রক্তচাপ বেড়ে গেছে। যদি দীর্ঘদিন এটি নিয়ন্ত্রণে না রাখা হয় তাহলে হার্ট অ্যাটাক, স্ট্রোক এবং কিডনি ফেইলিউরের ঝুঁকি বেড়ে যায়।
-</p>
-
-<p>
-বর্তমানে বাংলাদেশসহ পুরো বিশ্বে এই রোগ দ্রুত বাড়ছে। অনিয়মিত জীবনযাপন, ফাস্ট ফুড, মানসিক চাপ এবং ব্যায়ামের অভাব এর প্রধান কারণ। তবে ভালো খবর হলো—সঠিক খাদ্যাভ্যাস ও লাইফস্টাইল পরিবর্তনের মাধ্যমে এটি সহজেই নিয়ন্ত্রণ করা সম্ভব।
-</p>
-
-<h2>উচ্চ রক্তচাপ কেন হয়?</h2>
-
-<p>
-উচ্চ রক্তচাপ হওয়ার পেছনে অনেক কারণ আছে। বেশিরভাগ ক্ষেত্রেই আমাদের দৈনন্দিন অভ্যাসই এর জন্য দায়ী।
-</p>
-
-<ul>
-<li>অতিরিক্ত লবণযুক্ত খাবার খাওয়া</li>
-<li>ফাস্ট ফুড ও জাঙ্ক ফুড বেশি খাওয়া</li>
-<li>স্থূলতা বা অতিরিক্ত ওজন</li>
-<li>মানসিক চাপ ও দুশ্চিন্তা</li>
-<li>ধূমপান ও অ্যালকোহল সেবন</li>
-<li>শারীরিক পরিশ্রম না করা</li>
-</ul>
-
-<h2>উচ্চ রক্তচাপের লক্ষণ</h2>
-
-<p>
-অনেক সময় উচ্চ রক্তচাপ কোনো লক্ষণ ছাড়াই থাকে, তবে কিছু সাধারণ লক্ষণ দেখা দিতে পারে।
-</p>
-
-<ul>
-<li>মাথা ব্যথা বা মাথা ভারী লাগা</li>
-<li>মাথা ঘোরা</li>
-<li>বুক ধড়ফড় করা</li>
-<li>শ্বাস নিতে কষ্ট হওয়া</li>
-<li>দ্রুত ক্লান্তি অনুভব করা</li>
-</ul>
-
-<h2>রক্তচাপ নিয়ন্ত্রণের খাবার তালিকা</h2>
-
-<div class="box tip">
-<h3>🥗 উপকারী খাবার</h3>
-<ul>
-<li>সবুজ শাক-সবজি (পালং, লাল শাক)</li>
-<li>ফলমূল (কলা, আপেল, কমলা)</li>
-<li>ওটস ও ব্রাউন রাইস</li>
-<li>মাছ (বিশেষ করে সামুদ্রিক মাছ)</li>
-<li>রসুন ও লেবু</li>
-</ul>
-</div>
-
-<div class="box">
-<h3>⚠️ এড়িয়ে চলুন</h3>
-<ul>
-<li>অতিরিক্ত লবণ</li>
-<li>ভাজা-পোড়া খাবার</li>
-<li>ফাস্ট ফুড</li>
-<li>কোল্ড ড্রিংক</li>
-<li>প্রসেসড খাবার</li>
-</ul>
-</div>
-
-<h2>ঘরোয়া উপায়ে রক্তচাপ নিয়ন্ত্রণ</h2>
-
-<p>
-ওষুধ ছাড়াও কিছু ঘরোয়া উপায় মেনে চললে রক্তচাপ নিয়ন্ত্রণে রাখা সম্ভব।
-</p>
-
-<ul>
-<li>প্রতিদিন ৩০ মিনিট হাঁটা বা ব্যায়াম করা</li>
-<li>পর্যাপ্ত পানি পান করা</li>
-<li>লবণ কম খাওয়া</li>
-<li>স্ট্রেস কমানো ও মেডিটেশন করা</li>
-<li>নিয়মিত ঘুম (৭–৮ ঘণ্টা)</li>
-</ul>
-
-<h2>জীবনযাত্রার পরিবর্তন কেন জরুরি?</h2>
-
-<p>
-শুধু খাবার নয়, পুরো জীবনযাত্রা পরিবর্তন করা জরুরি। যারা দীর্ঘ সময় বসে কাজ করেন তাদের জন্য শারীরিক কার্যকলাপ খুব গুরুত্বপূর্ণ। ধূমপান ও অ্যালকোহল সম্পূর্ণ বন্ধ করা উচিত। মানসিক চাপ কমাতে পরিবার ও সামাজিক জীবন গুরুত্বপূর্ণ ভূমিকা রাখে।
-</p>
-
-<h2>কখন ডাক্তারের পরামর্শ নিতে হবে?</h2>
-
-<p>
-যদি বারবার রক্তচাপ বেশি থাকে বা মাথা ঘোরা, বুক ব্যথা, শ্বাসকষ্ট দেখা দেয় তাহলে দ্রুত ডাক্তারের পরামর্শ নিতে হবে। অবহেলা করলে এটি জীবনঘাতী হতে পারে।
-</p>
-<h2 style="text-align: center; color: #d9534f;">উচ্চ রক্তচাপ বা হৃদরোগের অবনতি ঘটলে দ্রুত বিশেষজ্ঞ ডাক্তারের পরামর্শ নিন</h2>
-
-<section id="doctors">
-    <div class="doctor-grid">
-        <!-- Doctor 1 -->
-        <div class="doctor-card">
-            <h2>অধ্যাপক ডাঃ কাজী শরীফুল ইসলাম</h2>
-            <span class="specialty">কার্ডিওলজি ও হৃদরোগ বিশেষজ্ঞ</span>
-            <div class="info-row"><span>চেম্বার:</span> পিপলস ডায়াগনস্টিক এন্ড হাসপাতাল।</div>
-            <div class="info-row"><span>সময়:</span> প্রতিদিন (বিকাল ৩ - রাত ৮), শুক্রবার বন্ধ</div>
-            <div class="visit-fee">ফি: ৭০০ টাকা</div>
-            <a href="tel:01758020057" class="btn-call">সুসেবা হটলাইন: 01758020057</a>
-        </div>
-
-        <!-- Doctor 2 -->
-        <div class="doctor-card">
-            <h2>ডাঃ মোঃ সাইফুল ইসলাম</h2>
-            <span class="specialty">হৃদরোগ, মেডিসিন, বাতজ্বর ও উচ্চরক্তচাপ বিশেষজ্ঞ</span>
-            <div class="info-row"><span>চেম্বার:</span> মেমোরিয়াল ডায়াগনস্টিক সেন্টার, ময়মনসিংহ।</div>
-            <div class="info-row"><span>সময়:</span> শনি - বৃহস্পতি (বিকাল ৩ - রাত ৯), শুক্রবার বন্ধ</div>
-            <div class="visit-fee">ফি: ৮০০ টাকা</div>
-            <a href="tel:01758020057" class="btn-call">সুসেবা হটলাইন: 01758020057</a>
-        </div>
-
-        <!-- Doctor 3 -->
-        <div class="doctor-card">
-            <h2>ডাঃ মোঃ ছাইদুল রহমান</h2>
-            <span class="specialty">হৃদরোগ, মেডিসিন ও বাতজ্বর বিশেষজ্ঞ</span>
-            <div class="info-row"><span>চেম্বার:</span> মেমোরিয়াল ডায়াগনস্টিক সেন্টার, ময়মনসিংহ।</div>
-            <div class="info-row"><span>সময়:</span> শনি - বৃহস্পতি (বিকাল ৩ - রাত ৯), শুক্রবার বন্ধ</div>
-            <div class="visit-fee">ফি: ৭০০ টাকা</div>
-            <a href="tel:01758020057" class="btn-call">সুসেবা হটলাইন: 01758020057</a>
-        </div>
-
-        <!-- Doctor 4 -->
-        <div class="doctor-card">
-            <h2>ডাঃ আর.সি.দেবনাথ</h2>
-            <span class="specialty">কার্ডিওলজি ও হৃদরোগ বিশেষজ্ঞ</span>
-            <div class="info-row"><span>চেম্বার:</span> পপুলার ডায়াগনস্টিক সেন্টার লিঃ, ময়মনসিংহ।</div>
-            <div class="info-row"><span>সময়:</span> প্রতিদিন (সকাল ১১ - দুপুর ১:৩০), শুক্রবার বন্ধ</div>
-            <div class="visit-fee">ফি: ১০০০ টাকা</div>
-            <a href="tel:01758020057" class="btn-call">সুসেবা হটলাইন: 01758020057</a>
-        </div>
-
-        <!-- Doctor 5 -->
-        <div class="doctor-card">
-            <h2>ডাঃ পারভেজ রহমান খান</h2>
-            <span class="specialty">হৃদরোগ, মেডিসিন ও ডায়াবেটিস বিশেষজ্ঞ</span>
-            <div class="info-row"><span>চেম্বার:</span> ইউনিয়ন স্পেশালাইজড হাসপাতাল লিঃ, ময়মনসিংহ।</div>
-            <div class="info-row"><span>সময়:</span> প্রতিদিন (বিকাল ৩ - রাত ৯)</div>
-            <div class="visit-fee">ফি: ৭০০ টাকা</div>
-            <a href="tel:01758020057" class="btn-call">সুসেবা হটলাইন: 01758020057</a>
-        </div>
-
-        <!-- Doctor 6 -->
-        <div class="doctor-card">
-            <h2>অধ্যাপক ডাঃ গণপতি আদিত্য</h2>
-            <span class="specialty">হৃদরোগ, মেডিসিন ও হার্ট অ্যাটাক প্রতিরোধ বিশেষজ্ঞ</span>
-            <div class="info-row"><span>চেম্বার:</span> প্রান্ত ডায়াগনস্টিক সেন্টার, ময়মনসিংহ।</div>
-            <div class="info-row"><span>সময়:</span> রবি, সোম ও মঙ্গলবার (বিকাল ৩ - সন্ধ্যা ৭)</div>
-            <div class="visit-fee">ফি: ১২০০ টাকা</div>
-            <a href="tel:01758020057" class="btn-call">সুসেবা হটলাইন: 01758020057</a>
+    <div class="content-section">
+        <h2>উচ্চ রক্তচাপের সময় দ্রুত করণীয় পদক্ষেপ</h2>
+        <div class="todo-grid">
+            <div>
+                <strong>১. কাঁচা লবণ ও সোডিয়াম বর্জন:</strong> প্রতিদিনের খাদ্যতালিকায় লবণের পরিমাণ ১ চা চামচের কম রাখুন। কাঁচা লবণ রক্তচাপ দ্রুত বাড়ায়।
+            </div>
+            <div>
+                <strong>২. সঠিক ডায়েট (DASH Diet):</strong> প্রচুর পরিমাণে আঁশযুক্ত সবজি, ফলমূল এবং শস্য জাতীয় খাবার গ্রহণ করুন। চর্বিযুক্ত মাংস এড়িয়ে চলুন।
+            </div>
+            <div>
+                <strong>৩. নিয়মিত ব্যায়াম:</strong> দিনে অন্তত ৩০-৪০ মিনিট দ্রুত হাঁটুন। এটি হার্টের কার্যক্ষমতা বৃদ্ধি করে।
+            </div>
+            <div>
+                <strong>৪. ধূমপান ও মদ্যপান ত্যাগ:</strong> তামাকের নিকোটিন রক্তনালীকে সংকুচিত করে ফেলে, যা রক্তচাপ বাড়াতে সরাসরি ভূমিকা রাখে।
+            </div>
+            <div>
+                <strong>৫. পর্যাপ্ত ঘুম ও প্রশান্তি:</strong> প্রতিদিন অন্তত ৭-৮ ঘণ্টা গভীর ঘুম প্রয়োজন। দীর্ঘমেয়াদী দুশ্চিন্তা থেকে দূরে থাকার চেষ্টা করুন।
+            </div>
+            <div>
+                <strong>৬. ওজন নিয়ন্ত্রণ:</strong> BMI অনুযায়ী আদর্শ ওজন বজায় রাখুন। পেটের মেদ কমানো উচ্চ রক্তচাপ নিয়ন্ত্রণের অন্যতম শর্ত।
+            </div>
         </div>
     </div>
-</section>
 
-<h2>উপসংহার</h2>
+    <div class="content-section">
+        <h2>সেরা ৬ জন কার্ডিওলজি বিশেষজ্ঞ ও চেম্বারের সময়</h2>
+        <div class="doctor-grid">
+            <!-- Doctor 1 -->
+            <div class="doctor-card">
+                <span class="doctor-name">অধ্যাপক ডা. এম. আমানুল্লাহ</span>
+                <small>সিনিয়র কনসালটেন্ট, ল্যাবএইড কার্ডিয়াক হাসপাতাল</small>
+                <span class="visiting-time">⏱️ সময়: বিকাল ৫টা - রাত ৯টা (শুক্র বন্ধ)</span>
+                <a href="tel:16604" class="hotline-btn">📞 কল করুন: ১৬৬০৪</a>
+            </div>
 
-<p>
-উচ্চ রক্তচাপ একটি নিয়ন্ত্রণযোগ্য রোগ। সঠিক খাদ্যাভ্যাস, নিয়মিত ব্যায়াম এবং স্বাস্থ্যকর জীবনযাত্রার মাধ্যমে এটি নিয়ন্ত্রণ করা সম্ভব। সবচেয়ে গুরুত্বপূর্ণ হলো নিয়ম মেনে চলা এবং ধৈর্য রাখা।
-</p>
+            <!-- Doctor 2 -->
+            <div class="doctor-card">
+                <span class="doctor-name">অধ্যাপক ডা. এইচ আই লুৎফর রহমান</span>
+                <small>কার্ডিওলজি বিভাগ, বারডেম জেনারেল হাসপাতাল</small>
+                <span class="visiting-time">⏱️ সময়: সকাল ১০টা - দুপুর ১টা (শনি-বুধ)</span>
+                <a href="tel:10611" class="hotline-btn">📞 কল করুন: ১০৬১১</a>
+            </div>
 
-<!-- Internal Links -->
-<div class="box tip">
-<h3>🔗 আরও স্বাস্থ্য গাইড</h3>
-<ul>
-<li><a href="https://suseba.com/diabetics-tips.html">ডায়াবেটিস নিয়ন্ত্রণ গাইড</a></li>
-<li><a href="https://suseba.com/gastric-problem-solution.html">গ্যাস্ট্রিক সমস্যার সমাধান</a></li>
-<li><a href="https://suseba.com/weight-loss-plan.html">ওজন কমানোর ডায়েট চার্ট</a></li>
-<li><a href="https://suseba.com/pregnancy-food.html">গর্ভাবস্থার খাদ্য তালিকা</a></li>
-<li><a href="https://suseba.com/doctor-serial-online.html">ঘরে বসে ডাক্তারের সিরিয়াল দেয়ার সহজ উপায়</a></li>
-</ul>
-</div>
+            <!-- Doctor 3 -->
+            <div class="doctor-card">
+                <span class="doctor-name">ডা. এস এম ফজলুল হক</span>
+                <small>সিনিয়র কনসালটেন্ট, ইবনে সিনা হাসপাতাল</small>
+                <span class="visiting-time">⏱️ সময়: বিকাল ৪টা - রাত ৮টা (বৃহস্পতি বন্ধ)</span>
+                <a href="tel:10615" class="hotline-btn">📞 কল করুন: ১০৬১৫</a>
+            </div>
 
-<!-- App Promotion -->
-<div style="margin-top:40px;padding:30px;background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:15px;text-align:center;border:1px solid #90caf9;">
+            <!-- Doctor 4 -->
+            <div class="doctor-card">
+                <span class="doctor-name">ডা. জাহানারা আরজু</span>
+                <small>সহকারী অধ্যাপক, বিএসএমএমইউ (পিজি হাসপাতাল)</small>
+                <span class="visiting-time">⏱️ সময়: সন্ধ্যা ৬টা - রাত ৯টা (সোম ও বুধ)</span>
+                <a href="tel:09611333333" class="hotline-btn">📞 কল করুন: ০৯৬১১৩৩৩৩৩৩</a>
+            </div>
 
-<h2 style="color:#0d47a1;">📱 আমাদের Health App ব্যবহার করুন</h2>
+            <!-- Doctor 5 -->
+            <div class="doctor-card">
+                <span class="doctor-name">ডা. এম. এ. বাকী</span>
+                <small>জাতীয় হৃদরোগ ইনস্টিটিউট ও হাসপাতাল</small>
+                <span class="visiting-time">⏱️ সময়: বিকাল ৩টা - সন্ধ্যা ৬টা (রবি-বৃহস্পতি)</span>
+                <a href="tel:029122560" class="hotline-btn">📞 কল করুন: ০২-৯১২২৫৬০</a>
+            </div>
 
-<p style="color:#0d47a1;">
-ডায়াবেটিস, গ্যাস্ট্রিক, ওজন কমানো, গর্ভাবস্থা এবং রক্তচাপ নিয়ন্ত্রণের সব তথ্য এক জায়গায়।
-</p>
+            <!-- Doctor 6 -->
+            <div class="doctor-card">
+                <span class="doctor-name">ডা. তৌফিক শাহরিয়ার হক</span>
+                <small>চিফ কনসালটেন্ট, এভারকেয়ার হাসপাতাল</small>
+                <span class="visiting-time">⏱️ সময়: সকাল ৯টা - বিকাল ৪টা (শনি-বৃহস্পতি)</span>
+                <a href="tel:10678" class="hotline-btn">📞 কল করুন: ১০৬৭৮</a>
+            </div>
+        </div>
+    </div>
 
-<p style="font-weight:bold;color:#d32f2f;">
-🚀 ফ্রি ডায়েট চার্ট + ডাক্তার তথ্য + স্বাস্থ্য টিপস
-</p>
+    <div class="content-section">
+        <h2>আরও পড়ুন আমাদের গুরুত্বপূর্ণ স্বাস্থ্য টিপস</h2>
+        <div class="internal-links">
+            <a href="#">১. হার্ট অ্যাটাকের লক্ষণ ও প্রতিকার</a>
+            <a href="#">২. ব্লাড প্রেসার মাপার সঠিক গাইডলাইন</a>
+            <a href="#">৩. লো ব্লাড প্রেসারের ঘরোয়া চিকিৎসা</a>
+            <a href="#">৪. কিডনি সুস্থ রাখার খাবার তালিকা</a>
+            <a href="#">৫. মেদ কমানোর আধুনিক ডায়েট প্ল্যান</a>
+            <a href="#">৬. ডায়াবেটিস ও উচ্চ রক্তচাপের সম্পর্ক</a>
+        </div>
+    </div>
 
-<a href="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" class="btn">📲 এখনই অ্যাপ ডাউনলোড করুন</a>
+    <div class="app-cta">
+        <h2>আপনার স্বাস্থ্য এখন স্মার্টফোনেই!</h2>
+        <p>নিয়মিত রক্তচাপের রেকর্ড রাখা, ঔষধের অ্যালার্ম সেট করা এবং অভিজ্ঞ ডাক্তারদের পরামর্শ নিতে আমাদের "HealthTrack" অ্যাপটি আজই ডাউনলোড করুন। ১২০০+ ডায়েট রেসিপি ফ্রি পান!</p>
+        <div class="download-buttons">
+            <a href="#" class="dl-btn">Google Play Store</a>
+            <a href="#" class="dl-btn">Apple App Store</a>
+        </div>
+    </div>
 
-<p style="color:#555;font-size:0.9rem;margin-top:10px;">
-✔ ফ্রি ব্যবহার | ✔ নিয়মিত আপডেট | ✔ বিশ্বস্ত স্বাস্থ্য গাইড
-</p>
-
-</div>
-
+    <footer style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.8em; color: #777;">
+        *সতর্কবার্তা: এখানে প্রদত্ত তথ্য সাধারণ সচেতনতার জন্য। আপনার রক্তচাপ নিয়মিত উচ্চ থাকলে অবশ্যই বিশেষজ্ঞ ডাক্তারের পরামর্শ নিন।
+    </footer>
 </div>
 
 </body>

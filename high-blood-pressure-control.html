@@ -65,6 +65,59 @@ li{
     border-radius:10px;
     margin:20px 0;
 }
+    /* পুরো সেকশনের ফন্ট এবং ডিজাইন ঠিক করার জন্য */
+#doctors {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* সুন্দর ফন্ট */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* কার্ডগুলো অটো সাজাবে */
+    gap: 20px;
+}
+
+.doctor-card {
+    border-left: 5px solid #d9534f; /* ছবির মতো বাম পাশে লাল দাগ */
+    padding: 15px;
+    background: #f9f9f9;
+    margin-bottom: 20px;
+    text-align: left; /* লেখাগুলো বাম দিক থেকে শুরু হবে */
+}
+
+.doctor-card h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.doctor-card .specialty {
+    display: block;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.doctor-card .info-row {
+    margin: 5px 0;
+    color: #444;
+}
+
+.visit-fee {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn-call {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #d9534f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
 /* Doctor Grid */
         .doctor-grid {
             display: grid;

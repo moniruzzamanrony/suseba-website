@@ -197,27 +197,87 @@
             background: #218838;
         }
 
-        /* App Promotion */
-        .app-promo {
-            background: #fff;
-            margin-top: 50px;
-            padding: 40px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
+        /* অ্যাপ সেকশন স্টাইল */
+.app-promo-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #eee;
+}
 
-        .app-text h2 { color: var(--primary-color); margin-bottom: 15px; }
+.app-text-content h2 {
+    color: #0062ff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
-        .download-btns img {
-            height: 45px;
-            margin-right: 10px;
-            margin-top: 15px;
-            cursor: pointer;
-        }
+.app-text-content p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.download-btns-wrapper {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-app-download {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    min-width: 180px;
+    transition: all 0.3s ease;
+    border: 1px solid #222;
+}
+
+.btn-app-download:hover {
+    transform: translateY(-3px);
+    background: #222;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.app-btn-icon {
+    font-size: 26px;
+    margin-right: 12px;
+}
+
+.app-btn-text {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.app-btn-text small {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.app-btn-text span {
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+}
+
+/* মোবাইল ডিভাইসের জন্য */
+@media (max-width: 480px) {
+    .btn-app-download {
+        width: 100%;
+        justify-content: center;
+    }
+}
 
         /* Article Section */
         #about-skin {
@@ -387,25 +447,37 @@
     </div>
 </div>
 
-    <!-- App Promotion Section -->
-    <section id="app" class="app-promo">
-        <div class="app-text">
-            <h2>আমাদের হেলথ অ্যাপ ডাউনলোড করুন</h2>
-            <p>সহজেই ডাক্তার খুঁজুন এবং ঘরে বসে সিরিয়াল বুক করুন।</p>
-            <div class="download-btns">
-                <img src="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" alt="Play Store">
-                <img src="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" alt="App Store">
-            </div>
-        </div>
-        <div class="app-image">
-            <h1 style="font-size: 80px; color: #ddd;">📱</h1>
-        </div>
-    </section>
 
-</div>
+
+<div class="app-promo-container">
+    <div class="app-text-content">
+        <h2>আমাদের হেলথ অ্যাপ ডাউনলোড করুন</h2>
+        <p>সহজেই ডাক্তার খুঁজুন এবং ঘরে বসে সিরিয়াল বুক করুন।</p>
+    </div>
+
+    <div class="download-btns-wrapper">
+        <!-- Google Play Store Button -->
+        <a href="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" class="btn-app-download" target="_blank">
+            <div class="app-btn-icon">▶️</div>
+            <div class="app-btn-text">
+                <small>GET IT ON</small>
+                <span>Google Play</span>
+            </div>
+        </a>
+
+        <!-- App Store Button -->
+        <a href="https://play.google.com/store/apps/details?id=dev.moniruzzamanrony.susebav2" class="btn-app-download" target="_blank">
+            <div class="app-btn-icon">🍎</div>
+            <div class="app-btn-text">
+                <small>Download on the</small>
+                <span>App Store</span>
+            </div>
+        </a>
+    </div>
+</div></div>
 
 <footer>
-    <p>&copy; ২০২৪ ময়মনসিংহ ডাক্তার গাইড। সর্বস্বত্ব সংরক্ষিত। <br> হটলাইন: 01758-020057</p>
+    <p>&copy; ২০২৬ ময়মনসিংহ ডাক্তার গাইড। সর্বস্বত্ব সংরক্ষিত। <br> হটলাইন: 01758-020057</p>
 </footer>
 
 </body>

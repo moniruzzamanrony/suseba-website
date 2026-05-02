@@ -47,7 +47,7 @@ h2{
 p{
     line-height:1.9;
     color:#333;
-    text-align:justify;
+    text-align:left;
 }
 
 ul{
@@ -65,16 +65,87 @@ li{
     border-radius:10px;
     margin:20px 0;
 }
+
+/* কন্টেইনার সেটআপ */
+#doctors {
+    padding: 20px 10px;
+    background-color: #fcfcfc;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.doctor-grid {
+    display: flex;
+    flex-direction: column; /* মোবাইলের জন্য একটার নিচে একটা */
+    gap: 15px;
+    max-width: 800px; /* পড়ার সুবিধার জন্য উইডথ সীমিত করা */
+    margin: 0 auto;
+}
+
+/* কার্ডের মূল ডিজাইন */
+.doctor-card {
+    background: #fff;
+    border-left: 6px solid #e74c3c; /* বাম পাশে মোটা লাল দাগ */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* স্মুথ ট্রানজিশন */
+    text-align: left;
+    position: relative;
+}
+
+/* হোভার ইফেক্ট - যা আপনি চাচ্ছিলেন */
+.doctor-card:hover {
+    transform: translateX(8px); /* হোভার করলে হালকা ডান দিকে সরবে */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    border-left-color: #27ae60; /* হোভার করলে লাল বর্ডার সবুজ হবে */
+}
+
+/* টেক্সট স্টাইল */
+.doctor-card h2 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.specialty {
+    display: block;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-row {
+    margin: 4px 0;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* কল বাটনের ডিজাইন */
+.btn-call {
+    display: inline-block;
+    margin-top: 12px;
+    color: #0000ee; /* ছবির মতো নীল রঙ */
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-call:hover {
+    color: #d9534f;
+}
+
     /* পুরো সেকশনের ফন্ট এবং ডিজাইন ঠিক করার জন্য */
 #doctors {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* সুন্দর ফন্ট */
+    font-family: 'Noto Sans Bengali', Tahoma, Geneva, Verdana, sans-serif; /* সুন্দর ফন্ট */
     padding: 20px;
     background-color: #fff;
 }
 
 .doctor-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* কার্ডগুলো অটো সাজাবে */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* কার্ডগুলো অটো সাজাবে */
     gap: 20px;
 }
 

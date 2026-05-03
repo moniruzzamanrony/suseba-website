@@ -43,6 +43,43 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
+        .hair-care-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hair-care-info h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.tip-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tip-card h4 {
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.tip-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
         /* Doctor Info Card */
         .doctor-card {
             border: 2px solid #1abc9c;
@@ -118,15 +155,26 @@
 
     <div class="container">
         <!-- চুল পড়া বন্ধের উপায় সেকশন -->
-<div class="hair-care-tips">
-    <h3>চুল পড়া বন্ধের কিছু উপায়:</h3>
-    <ul>
-        <li>পর্যাপ্ত পরিমাণে প্রোটিন সমৃদ্ধ খাবার (যেমন: ডিম, মাছ, বাদাম) গ্রহণ করুন।</li>
-        <li>চুলে নিয়মিত প্রাকৃতিক তেল (যেমন: নারকেল তেল বা ক্যাস্টর অয়েল) ম্যাসাজ করুন।</li>
-        <li>অতিরিক্ত দুশ্চিন্তা এড়িয়ে চলুন এবং পর্যাপ্ত ঘুমানোর চেষ্টা করুন।</li>
-        <li>রাসায়নিক পণ্য বা অতিরিক্ত হিট স্টাইলিং টুলস ব্যবহার কমান।</li>
-        <li>সব সময় চুল পরিষ্কার রাখুন এবং ভেজা চুল আঁচড়ানো থেকে বিরত থাকুন।</li>
-    </ul>
+<div class="hair-care-info">
+    <h2>চুল পড়া বন্ধের কার্যকরী উপায়</h2>
+    <div class="tips-grid">
+        <div class="tip-card">
+            <h4>সুষম খাদ্য</h4>
+            <p>প্রতিদিনের খাদ্যতালিকায় প্রোটিন, বায়োটিন, আয়রন এবং ভিটামিন সমৃদ্ধ খাবার রাখুন।</p>
+        </div>
+        <div class="tip-card">
+            <h4>সঠিক পরিষ্কার</h4>
+            <p>সপ্তাহে ২-৩ দিন মাইল্ড শ্যাম্পু ব্যবহার করে চুল ও মাথার ত্বক পরিষ্কার রাখুন।</p>
+        </div>
+        <div class="tip-card">
+            <h4>তেল ম্যাসাজ</h4>
+            <p>সপ্তাহে অন্তত একবার কুসুম গরম নারিকেল তেল বা ক্যাস্টর অয়েল চুলে ম্যাসাজ করুন।</p>
+        </div>
+        <div class="tip-card">
+            <h4>দুশ্চিন্তা কমান</h4>
+            <p>অতিরিক্ত দুশ্চিন্তা ও পর্যাপ্ত ঘুমের অভাব চুল পড়ার অন্যতম কারণ। নিয়মিত ব্যায়াম করুন।</p>
+        </div>
+    </div>
 </div>
         <!-- Doctor Info Card -->
         <div id="doctor" class="doctor-card">

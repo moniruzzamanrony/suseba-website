@@ -2,19 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-  <loc>https://suseba.com/</loc>
-  <changefreq>daily</changefreq>
-  <priority>1.0</priority>
-</url>
-
-<url>
-  <loc>https://suseba.com/blog.html</loc>
+  <loc>https://suseba.com/gyne-doctor-mymensingh.html</loc>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>https://suseba.com/blog-details.html</loc>
+  <loc>https://suseba.com/high-blood-pressure-control.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://suseba.com/gastric-problem-solution.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://suseba.com/pregnancy-food.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://suseba.com/weight-loss-plan.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://suseba.com/skin-care.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://suseba.com/hair-care.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://suseba.com/online-doctor.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://suseba.com/gyne-dr.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://suseba.com/insomnia-solution.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://suseba.com/suseba-doctor.html</loc>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>

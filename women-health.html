@@ -3,248 +3,464 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="মেয়েদের অনিয়মিত পিরিয়ড কেন হয়, লক্ষণ, কারণ, করণীয় ও চিকিৎসা সম্পর্কে বিস্তারিত গাইড।">
-<meta name="keywords" content="অনিয়মিত পিরিয়ড, women health, period problem, PCOS, গাইনি সমস্যা">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://suseba.com/women-health-period-guide.html">
+
 <title>মেয়েদের অনিয়মিত পিরিয়ড কেন হয়? | Women Health Guide</title>
 
+<meta name="description" content="মেয়েদের অনিয়মিত পিরিয়ডের কারণ, লক্ষণ, চিকিৎসা, PCOS, স্বাস্থ্য টিপস ও করণীয় সম্পর্কে বিস্তারিত জানুন।">
+<meta name="keywords" content="অনিয়মিত পিরিয়ড, women health, period problem, PCOS, মেয়েদের স্বাস্থ্য">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://suseba.com/women-health-period-guide.html">
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7fb;
+font-family:'Hind Siliguri',sans-serif;
+background:#f4f7fc;
 color:#222;
-line-height:1.8;
+line-height:1.9;
 }
 
-header{
+/* HERO */
+
+.hero{
 background:linear-gradient(135deg,#ff4f81,#ff758c);
-color:white;
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
+color:#fff;
+position:relative;
+overflow:hidden;
 }
 
-header h1{
-font-size:2rem;
+.hero::before{
+content:'';
+position:absolute;
+width:300px;
+height:300px;
+background:rgba(255,255,255,0.1);
+border-radius:50%;
+top:-100px;
+right:-100px;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+width:250px;
+height:250px;
+background:rgba(255,255,255,0.08);
+border-radius:50%;
+bottom:-120px;
+left:-80px;
+}
+
+.hero h1{
+font-size:42px;
 margin-bottom:15px;
+position:relative;
+z-index:2;
 }
 
-header p{
-font-size:1rem;
-max-width:700px;
+.hero p{
+max-width:750px;
 margin:auto;
+font-size:18px;
+position:relative;
+z-index:2;
 }
+
+/* CONTAINER */
 
 .container{
-max-width:1000px;
-margin:30px auto;
-padding:20px;
+max-width:1100px;
+margin:auto;
+padding:30px 15px;
 }
 
+/* CARD */
+
 .card{
-background:white;
-padding:25px;
-border-radius:15px;
-margin-bottom:25px;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-transition:0.3s;
+background:#fff;
+padding:30px;
+border-radius:25px;
+margin-bottom:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
-h2{
-color:#e91e63;
+.card h2{
+color:#ff2e6d;
+margin-bottom:18px;
+font-size:30px;
+}
+
+.card h3{
+color:#444;
+margin-top:20px;
+margin-bottom:10px;
+font-size:23px;
+}
+
+.card p{
+font-size:18px;
 margin-bottom:15px;
-font-size:1.6rem;
+color:#444;
 }
 
-h3{
-margin:15px 0;
-color:#ff4f81;
-}
+/* LIST */
 
 ul{
 padding-left:20px;
 }
 
-li{
-margin-bottom:10px;
+ul li{
+margin-bottom:12px;
+font-size:18px;
 }
+
+/* HIGHLIGHT BOX */
 
 .highlight{
-background:#fff0f5;
-padding:15px;
-border-left:5px solid #ff4f81;
-border-radius:10px;
-margin-top:15px;
+background:#fff2f6;
+border-left:6px solid #ff2e6d;
+padding:20px;
+margin-top:20px;
+border-radius:15px;
+font-size:18px;
 }
 
-.faq{
-margin-top:20px;
+/* INTERNAL LINKS */
+
+.internal-links{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+margin-top:25px;
 }
+
+.internal-links a{
+text-decoration:none;
+background:linear-gradient(135deg,#ff4f81,#ff758c);
+padding:18px;
+border-radius:15px;
+color:#fff;
+font-size:18px;
+font-weight:600;
+transition:0.4s;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+box-shadow:0 6px 20px rgba(255,79,129,0.25);
+}
+
+.internal-links a:hover{
+transform:translateY(-5px) scale(1.02);
+}
+
+/* FAQ */
 
 .faq-item{
-margin-bottom:20px;
-padding:15px;
 background:#fafafa;
-border-radius:10px;
+padding:20px;
+border-radius:15px;
+margin-top:15px;
+border:1px solid #eee;
 }
+
+.faq-item h4{
+color:#ff2e6d;
+margin-bottom:10px;
+font-size:21px;
+}
+
+/* CTA */
 
 .cta{
 background:linear-gradient(135deg,#ff4f81,#ff758c);
-color:white;
+padding:60px 25px;
+border-radius:30px;
 text-align:center;
-padding:40px 20px;
-border-radius:20px;
+color:white;
 margin-top:40px;
+box-shadow:0 10px 30px rgba(255,79,129,0.3);
+}
+
+.cta h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.cta p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+color:#fff;
 }
 
 .cta a{
 display:inline-block;
-margin-top:15px;
-padding:12px 25px;
-background:white;
-color:#ff4f81;
+padding:15px 35px;
+background:#fff;
+color:#ff2e6d;
 text-decoration:none;
+font-size:20px;
 font-weight:bold;
-border-radius:30px;
-transition:0.3s;
+border-radius:50px;
+transition:0.4s;
 }
 
 .cta a:hover{
-background:#222;
-color:white;
-}
-
-footer{
-text-align:center;
-padding:20px;
 background:#111;
 color:#fff;
-margin-top:40px;
+transform:scale(1.05);
 }
+
+/* FOOTER */
+
+footer{
+background:#111;
+padding:30px;
+text-align:center;
+color:#fff;
+margin-top:50px;
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
-header h1{
-font-size:1.5rem;
+
+.hero h1{
+font-size:30px;
 }
 
-.container{
-padding:10px;
+.hero p{
+font-size:16px;
 }
+
+.card{
+padding:22px;
 }
+
+.card h2{
+font-size:25px;
+}
+
+.cta h2{
+font-size:28px;
+}
+
+.cta p{
+font-size:17px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<header>
+<!-- HERO -->
+
+<section class="hero">
+
 <h1>মেয়েদের অনিয়মিত পিরিয়ড কেন হয়?</h1>
-<p>Women Health Guide: অনিয়মিত পিরিয়ডের কারণ, লক্ষণ, করণীয়, PCOS, স্বাস্থ্য টিপস ও চিকিৎসা সম্পর্কে বিস্তারিত জানুন।</p>
-</header>
+
+<p>
+Women Health Guide — অনিয়মিত পিরিয়ডের কারণ, PCOS, স্বাস্থ্য সমস্যা, করণীয় ও চিকিৎসা সম্পর্কে বিস্তারিত জানুন।
+</p>
+
+</section>
+
+<!-- CONTENT -->
 
 <div class="container">
 
 <div class="card">
-<h2>পিরিয়ড অনিয়মিত হওয়া কি স্বাভাবিক?</h2>
-<p>মেয়েদের মাসিক চক্র সাধারণত ২১ থেকে ৩৫ দিনের মধ্যে হয়ে থাকে। তবে হরমোনের পরিবর্তন, মানসিক চাপ, খাদ্যাভ্যাস ও শারীরিক সমস্যার কারণে অনেক সময় পিরিয়ড অনিয়মিত হতে পারে।</p>
+
+<h2>অনিয়মিত পিরিয়ড কি?</h2>
+
+<p>
+মেয়েদের মাসিক চক্র সাধারণত ২১ থেকে ৩৫ দিনের মধ্যে হয়ে থাকে। তবে অনেক সময় হরমোনের পরিবর্তন, মানসিক চাপ, খাদ্যাভ্যাস বা শারীরিক সমস্যার কারণে পিরিয়ড অনিয়মিত হতে পারে।
+</p>
 
 <div class="highlight">
 <b>গুরুত্বপূর্ণ:</b> দীর্ঘদিন পিরিয়ড অনিয়মিত থাকলে অবশ্যই গাইনি ডাক্তারের পরামর্শ নেওয়া উচিত।
 </div>
+
 </div>
 
+<!-- REASONS -->
+
 <div class="card">
+
 <h2>অনিয়মিত পিরিয়ডের প্রধান কারণ</h2>
 
 <h3>১. হরমোনের সমস্যা</h3>
-<p>ইস্ট্রোজেন ও প্রোজেস্টেরন হরমোনের ভারসাম্য নষ্ট হলে মাসিক চক্রে সমস্যা হতে পারে।</p>
 
-<h3>২. অতিরিক্ত মানসিক চাপ</h3>
-<p>স্ট্রেস, দুশ্চিন্তা ও কম ঘুম শরীরের হরমোনে প্রভাব ফেলে।</p>
+<p>
+ইস্ট্রোজেন ও প্রোজেস্টেরন হরমোনের ভারসাম্য নষ্ট হলে মাসিক চক্রে সমস্যা দেখা দেয়।
+</p>
 
-<h3>৩. PCOS সমস্যা</h3>
-<ul>
-<li>ওজন বৃদ্ধি</li>
-<li>মুখে ব্রণ</li>
-<li>পিরিয়ড দেরিতে হওয়া</li>
-<li>অতিরিক্ত লোম</li>
-</ul>
+<h3>২. PCOS সমস্যা</h3>
+
+<p>
+বর্তমানে অনেক মেয়েই PCOS সমস্যায় ভুগছেন। এতে পিরিয়ড দেরিতে হয়, ওজন বাড়ে এবং ব্রণের সমস্যা দেখা দেয়।
+</p>
+
+<h3>৩. অতিরিক্ত মানসিক চাপ</h3>
+
+<p>
+স্ট্রেস ও দুশ্চিন্তা শরীরের হরমোনে প্রভাব ফেলে এবং পিরিয়ড অনিয়মিত করে দেয়।
+</p>
 
 <h3>৪. থাইরয়েড সমস্যা</h3>
-<p>থাইরয়েড হরমোনের সমস্যার কারণে মাসিক অনিয়মিত হতে পারে।</p>
+
+<p>
+থাইরয়েডের সমস্যার কারণেও মাসিক চক্রে পরিবর্তন আসতে পারে।
+</p>
+
 </div>
 
+<!-- SOLUTION -->
+
 <div class="card">
-<h2>অনিয়মিত পিরিয়ড হলে করণীয়</h2>
+
+<h2>পিরিয়ড নিয়মিত রাখতে করণীয়</h2>
+
 <ul>
+
 <li>স্বাস্থ্যকর খাবার খেতে হবে</li>
+
 <li>প্রতিদিন পর্যাপ্ত ঘুমাতে হবে</li>
-<li>নিয়মিত হালকা ব্যায়াম করতে হবে</li>
-<li>অতিরিক্ত স্ট্রেস কমাতে হবে</li>
+
+<li>হালকা ব্যায়াম করতে হবে</li>
+
+<li>স্ট্রেস কমাতে হবে</li>
+
 <li>পর্যাপ্ত পানি পান করতে হবে</li>
+
+<li>ফাস্টফুড কম খেতে হবে</li>
+
 </ul>
+
 </div>
+
+<!-- FAQ -->
 
 <div class="card">
-<h2>কখন দ্রুত ডাক্তার দেখাবেন?</h2>
-<ul>
-<li>টানা ৩ মাস পিরিয়ড না হলে</li>
-<li>অতিরিক্ত রক্তপাত হলে</li>
-<li>তীব্র পেট ব্যথা হলে</li>
-<li>মাথা ঘোরা বা দুর্বলতা থাকলে</li>
-<li>বিয়ের পর দীর্ঘদিন গর্ভধারণ না হলে</li>
-</ul>
-</div>
 
-<div class="card faq">
 <h2>FAQ - সাধারণ প্রশ্ন</h2>
 
 <div class="faq-item">
-<h3>অনিয়মিত পিরিয়ড কি বিপজ্জনক?</h3>
-<p>সবসময় না। তবে দীর্ঘদিন সমস্যা থাকলে পরীক্ষা করা প্রয়োজন।</p>
+
+<h4>অনিয়মিত পিরিয়ড কি বিপজ্জনক?</h4>
+
+<p>
+সবসময় না। তবে দীর্ঘদিন সমস্যা থাকলে পরীক্ষা করা প্রয়োজন।
+</p>
+
 </div>
 
 <div class="faq-item">
-<h3>PCOS কি পুরোপুরি ভালো হয়?</h3>
-<p>সঠিক চিকিৎসা ও জীবনযাত্রা পরিবর্তনের মাধ্যমে নিয়ন্ত্রণে রাখা সম্ভব।</p>
+
+<h4>PCOS কি ভালো হয়?</h4>
+
+<p>
+সঠিক চিকিৎসা ও স্বাস্থ্যকর জীবনযাত্রার মাধ্যমে নিয়ন্ত্রণে রাখা সম্ভব।
+</p>
+
 </div>
 
 <div class="faq-item">
-<h3>পিরিয়ড দেরি হলে কি করবো?</h3>
-<p>স্ট্রেস কমান, স্বাস্থ্যকর খাবার খান এবং প্রয়োজন হলে গাইনি ডাক্তার দেখান।</p>
+
+<h4>পিরিয়ড দেরি হলে কি করবো?</h4>
+
+<p>
+স্ট্রেস কমান, স্বাস্থ্যকর খাবার খান এবং প্রয়োজন হলে গাইনি ডাক্তার দেখান।
+</p>
+
 </div>
+
 </div>
+
+<!-- INTERNAL LINKS -->
 
 <div class="card">
+
 <h2>আরও পড়ুন</h2>
+
 <div class="internal-links">
-<a href="https://suseba.com/gyne-dr.html">গাইনি ডাক্তার খুঁজুন</a><br>
-<a href="https://suseba.com/pregnancy-food.html">গর্ভাবস্থায় খাবার তালিকা</a><br>
-<a href="https://suseba.com/weight-loss-plan.html">ওজন কমানোর স্বাস্থ্য টিপস</a><br>
-<a href="https://suseba.com/insomnia-solution.html">ঘুম না হওয়ার কারণ ও সমাধান</a><br>
-<a href="https://suseba.com/high-blood-pressure-control.html">উচ্চ রক্তচাপ নিয়ন্ত্রণ গাইড</a><br>
-<a href="https://suseba.com/online-doctor.html">অনলাইনে ডাক্তারের সিরিয়াল</a>
+
+<a href="https://suseba.com/gyne-dr.html">
+গাইনি ডাক্তার খুঁজুন
+</a>
+
+<a href="https://suseba.com/pregnancy-food.html">
+গর্ভাবস্থায় খাবার তালিকা
+</a>
+
+<a href="https://suseba.com/weight-loss-plan.html">
+ওজন কমানোর স্বাস্থ্য টিপস
+</a>
+
+<a href="https://suseba.com/insomnia-solution.html">
+ঘুম না হওয়ার কারণ
+</a>
+
+<a href="https://suseba.com/high-blood-pressure-control.html">
+উচ্চ রক্তচাপ নিয়ন্ত্রণ
+</a>
+
+<a href="https://suseba.com/online-doctor.html">
+অনলাইনে ডাক্তারের সিরিয়াল
+</a>
+
 </div>
+
 </div>
+
+<!-- CTA -->
 
 <div class="cta">
+
 <h2>নারী স্বাস্থ্য সম্পর্কে আরও জানতে চান?</h2>
-<p>নিয়মিত স্বাস্থ্য টিপস ও গাইনি ডাক্তারের তথ্য পেতে আমাদের ওয়েবসাইট ভিজিট করুন।</p>
-<a href="https://suseba.com">আরও জানুন</a>
+
+<p>
+নিয়মিত স্বাস্থ্য টিপস, গাইনি ডাক্তারের তথ্য ও গুরুত্বপূর্ণ Women Health Guide পেতে আমাদের ওয়েবসাইট ভিজিট করুন।
+</p>
+
+<a href="https://suseba.com">
+আরও জানুন
+</a>
+
 </div>
 
 </div>
+
+<!-- FOOTER -->
 
 <footer>
-<p>© 2026 Suseba Health Guide | Women Health Article</p>
+
+<p>
+© 2026 Suseba Health Guide | Women Health Article
+</p>
+
 </footer>
 
 </body>

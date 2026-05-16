@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,15 +15,15 @@
 <meta name="author" content="Suseba">
 <meta name="theme-color" content="#ff4f81">
 
-<link rel="canonical" href="https://suseba.com/irregular-period-problem.html">
+<link rel="canonical" href="https://suseba.com/irregular-period.html">
 
 <!-- Open Graph -->
 <meta property="og:title" content="অনিয়মিত মাসিক কেন হয়? কারণ ও সমাধান">
 <meta property="og:description" content="পিরিয়ড অনিয়মিত হওয়ার কারণ, লক্ষণ ও চিকিৎসা নিয়ে বিস্তারিত জানুন।">
 <meta property="og:type" content="article">
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -34,17 +35,20 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Hind Siliguri',sans-serif;
+font-family:'Noto Sans Bengali',sans-serif;
 background:#f5f7fb;
-color:#222;
-line-height:1.9;
+color:#1f2937;
+line-height:1.85;
+font-weight:400;
+-webkit-font-smoothing:antialiased;
+text-rendering:optimizeLegibility;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
 background:linear-gradient(135deg,#ff4f81,#ff7da1);
-padding:90px 20px;
+padding:100px 20px;
 text-align:center;
 position:relative;
 overflow:hidden;
@@ -75,9 +79,11 @@ left:-100px;
 
 .hero h1{
 font-size:48px;
-margin-bottom:20px;
+margin-bottom:25px;
 position:relative;
 z-index:2;
+font-weight:700;
+line-height:1.3;
 }
 
 .hero p{
@@ -86,6 +92,7 @@ margin:auto;
 font-size:20px;
 position:relative;
 z-index:2;
+line-height:1.9;
 }
 
 /* CONTAINER */
@@ -99,12 +106,14 @@ padding:50px 20px;
 /* CARD */
 
 .card{
-background:#fff;
+background:rgba(255,255,255,0.92);
 padding:35px;
 margin-bottom:35px;
-border-radius:22px;
+border-radius:24px;
 box-shadow:0 12px 30px rgba(0,0,0,0.08);
 transition:0.4s;
+border:1px solid rgba(255,255,255,0.5);
+backdrop-filter:blur(10px);
 }
 
 .card:hover{
@@ -116,12 +125,15 @@ box-shadow:0 18px 35px rgba(0,0,0,0.12);
 font-size:34px;
 color:#ff2f6d;
 margin-bottom:20px;
+font-weight:700;
+line-height:1.4;
 }
 
 .card p{
-font-size:19px;
+font-size:18px;
 margin-bottom:18px;
-color:#333;
+color:#374151;
+line-height:1.95;
 }
 
 .card ul{
@@ -131,6 +143,8 @@ padding-left:20px;
 .card ul li{
 margin-bottom:14px;
 font-size:18px;
+line-height:1.9;
+color:#374151;
 }
 
 /* TABLE */
@@ -155,9 +169,38 @@ padding:16px;
 border:1px solid #eee;
 font-size:17px;
 background:#fff;
+line-height:1.8;
+color:#374151;
 }
 
-/* DOCTOR BOX */
+/* HEALTH TIPS */
+
+.tip-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.tip{
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.tip:hover{
+transform:translateY(-6px);
+}
+
+.tip h3{
+color:#ff2f6d;
+margin-bottom:10px;
+font-size:22px;
+}
+
+/* DOCTOR SECTION */
 
 .doctor-box{
 display:grid;
@@ -183,11 +226,13 @@ transform:translateY(-6px);
 font-size:24px;
 margin-bottom:12px;
 color:#ff2f6d;
+font-weight:700;
 }
 
 .doctor p{
 font-size:17px;
 margin-bottom:8px;
+line-height:1.8;
 }
 
 /* INTERNAL LINKS */
@@ -220,9 +265,9 @@ transform:translateY(-5px);
 
 .cta{
 background:linear-gradient(135deg,#ff4f81,#ff7da1);
-padding:55px 25px;
+padding:60px 25px;
 text-align:center;
-border-radius:25px;
+border-radius:28px;
 color:#fff;
 margin-top:45px;
 }
@@ -235,11 +280,12 @@ margin-bottom:20px;
 .cta p{
 font-size:20px;
 margin-bottom:25px;
+line-height:1.9;
 }
 
 .cta a{
 display:inline-block;
-padding:15px 38px;
+padding:15px 40px;
 background:#fff;
 color:#ff2f6d;
 font-size:18px;
@@ -250,22 +296,23 @@ transition:0.4s;
 }
 
 .cta a:hover{
-background:#222;
+background:#111;
 color:#fff;
+transform:scale(1.05);
 }
 
 /* FOOTER */
 
 footer{
 background:#111;
-color:#ddd;
+padding:35px 20px;
 text-align:center;
-padding:30px 20px;
 margin-top:60px;
 }
 
 footer p{
-font-size:16px;
+color:#d1d5db;
+font-size:15px;
 }
 
 /* RESPONSIVE */
@@ -280,6 +327,10 @@ font-size:34px;
 font-size:18px;
 }
 
+.card{
+padding:25px;
+}
+
 .card h2{
 font-size:28px;
 }
@@ -291,6 +342,7 @@ font-size:30px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -302,17 +354,17 @@ font-size:30px;
 <h1>অনিয়মিত মাসিক কেন হয়? কারণ, লক্ষণ ও সমাধান</h1>
 
 <p>
-বর্তমানে অনেক নারী অনিয়মিত মাসিক সমস্যায় ভুগছেন। হরমোন সমস্যা, মানসিক চাপ, PCOS, খাদ্যাভ্যাস ও জীবনযাত্রার পরিবর্তনের কারণে এই সমস্যা বাড়ছে। 
+বর্তমানে অনেক নারী অনিয়মিত মাসিক সমস্যায় ভুগছেন। হরমোন সমস্যা, PCOS, মানসিক চাপ, খাদ্যাভ্যাস ও জীবনযাত্রার পরিবর্তনের কারণে এই সমস্যা বাড়ছে। 
 এই আর্টিকেলে অনিয়মিত মাসিকের কারণ, লক্ষণ, চিকিৎসা ও করণীয় সম্পর্কে বিস্তারিত জানুন।
 </p>
 
 </section>
 
-<!-- CONTAINER -->
+<!-- MAIN -->
 
 <div class="container">
 
-<!-- SECTION -->
+<!-- INTRO -->
 
 <div class="card">
 
@@ -324,16 +376,17 @@ font-size:30px;
 </p>
 
 <p>
-বর্তমানে কিশোরী থেকে শুরু করে বিবাহিত নারীদের মধ্যেও এই সমস্যা অনেক বেশি দেখা যাচ্ছে।
+বর্তমানে কিশোরী থেকে শুরু করে বিবাহিত নারীদের মধ্যেও এই সমস্যা অনেক বেশি দেখা যাচ্ছে। 
+সময়মতো চিকিৎসা না নিলে ভবিষ্যতে হরমোন সমস্যা বা সন্তান ধারণে জটিলতা দেখা দিতে পারে।
 </p>
 
 </div>
 
-<!-- SECTION -->
+<!-- CAUSES -->
 
 <div class="card">
 
-<h2>অনিয়মিত মাসিক হওয়ার প্রধান কারণ</h2>
+<h2>অনিয়মিত মাসিক হওয়ার কারণ</h2>
 
 <ul>
 
@@ -343,23 +396,23 @@ font-size:30px;
 
 <li>অতিরিক্ত মানসিক চাপ</li>
 
-<li>অতিরিক্ত ওজন বৃদ্ধি বা কমে যাওয়া</li>
-
 <li>থাইরয়েড সমস্যা</li>
 
-<li>অতিরিক্ত ডায়েটিং</li>
+<li>রক্তস্বল্পতা</li>
 
-<li>রক্তস্বল্পতা ও দুর্বলতা</li>
-
-<li>অতিরিক্ত ব্যায়াম বা শারীরিক চাপ</li>
+<li>অতিরিক্ত ওজন বৃদ্ধি বা কমে যাওয়া</li>
 
 <li>ঘুমের সমস্যা</li>
+
+<li>অস্বাস্থ্যকর খাদ্যাভ্যাস</li>
+
+<li>অতিরিক্ত ব্যায়াম বা শারীরিক চাপ</li>
 
 </ul>
 
 </div>
 
-<!-- SECTION -->
+<!-- SYMPTOMS -->
 
 <div class="card">
 
@@ -374,7 +427,7 @@ font-size:30px;
 
 <tr>
 <td>মাসিক দেরিতে হওয়া</td>
-<td>নির্দিষ্ট সময়ের অনেক পরে মাসিক হওয়া</td>
+<td>প্রতি মাসে নির্দিষ্ট সময়ের পরে মাসিক হওয়া</td>
 </tr>
 
 <tr>
@@ -384,55 +437,56 @@ font-size:30px;
 
 <tr>
 <td>পেট ব্যথা</td>
-<td>মাসিকের সময় অতিরিক্ত ব্যথা অনুভব করা</td>
+<td>তীব্র ব্যথা বা অস্বস্তি অনুভব করা</td>
 </tr>
 
 <tr>
 <td>দুর্বলতা</td>
-<td>শরীরে ক্লান্তি ও দুর্বলতা অনুভব করা</td>
+<td>শরীরে ক্লান্তি ও অবসাদ অনুভব করা</td>
 </tr>
 
 <tr>
 <td>ব্রণ ও চুল পড়া</td>
-<td>হরমোন সমস্যার কারণে ত্বক ও চুলের সমস্যা</td>
+<td>হরমোন সমস্যার কারণে ত্বক ও চুলের পরিবর্তন</td>
 </tr>
 
 </table>
 
 </div>
 
-<!-- SECTION -->
+<!-- TIPS -->
 
 <div class="card">
 
 <h2>অনিয়মিত মাসিক হলে করণীয়</h2>
 
-<p>
-এই সমস্যা দীর্ঘদিন থাকলে অবশ্যই গাইনি ডাক্তার দেখানো উচিত। 
-পাশাপাশি কিছু নিয়ম মেনে চললে অনেক ক্ষেত্রে উপকার পাওয়া যায়।
-</p>
+<div class="tip-box">
 
-<ul>
+<div class="tip">
+<h3>পুষ্টিকর খাবার</h3>
+<p>সবুজ শাকসবজি, ফলমূল ও আয়রন সমৃদ্ধ খাবার বেশি খেতে হবে।</p>
+</div>
 
-<li>পুষ্টিকর খাবার খান</li>
+<div class="tip">
+<h3>পর্যাপ্ত ঘুম</h3>
+<p>প্রতিদিন অন্তত ৭-৮ ঘণ্টা ঘুম শরীরের হরমোন ঠিক রাখতে সাহায্য করে।</p>
+</div>
 
-<li>প্রতিদিন পর্যাপ্ত পানি পান করুন</li>
+<div class="tip">
+<h3>স্ট্রেস কমান</h3>
+<p>অতিরিক্ত মানসিক চাপ হরমোনের ভারসাম্য নষ্ট করতে পারে।</p>
+</div>
 
-<li>অতিরিক্ত ফাস্টফুড এড়িয়ে চলুন</li>
-
-<li>ওজন নিয়ন্ত্রণে রাখুন</li>
-
-<li>নিয়মিত ঘুমান</li>
-
-<li>স্ট্রেস কমানোর চেষ্টা করুন</li>
-
-<li>ডাক্তারের পরামর্শ ছাড়া ওষুধ খাবেন না</li>
-
-</ul>
+<div class="tip">
+<h3>ডাক্তার দেখান</h3>
+<p>দীর্ঘদিন সমস্যা থাকলে অবশ্যই গাইনি বিশেষজ্ঞের পরামর্শ নিন।</p>
+</div>
 
 </div>
 
-<!-- DOCTOR SECTION -->
+</div>
+
+<!-- DOCTORS -->
 
 <div class="card">
 
@@ -446,39 +500,39 @@ font-size:30px;
 
 <p><strong>বিশেষত্ব:</strong> গাইনি ও প্রসূতি রোগ</p>
 
-<p><strong>চেম্বার:</strong>ডক্টরস ডায়াগনস্টিক সেন্টার,ময়মনসিংহ</p>
+<p><strong>চেম্বার:</strong> ডক্টরস ডায়াগনস্টিক সেন্টার, ময়মনসিংহ</p>
 
-<p><strong>সময়:</strong>প্রতিদিন বিকাল ৪টা - রাত ১০টা</p>
+<p><strong>সময়:</strong> বিকাল ৪টা - রাত ১০টা</p>
 
-<p><strong>হটলাইন:</strong> ০১৭৫৮০২০০৫৭</p>
+<p><strong>হটলাইন:</strong> 01758020057</p>
 
 </div>
 
 <div class="doctor">
 
-<h3>অধ্যাপক ডাঃ শিলা সেন </h3>
+<h3>অধ্যাপক ডাঃ শিলা সেন</h3>
 
 <p><strong>বিশেষত্ব:</strong> নারী স্বাস্থ্য বিশেষজ্ঞ</p>
 
-<p><strong>চেম্বার:</strong> শিলাঙ্গন হাসপাতাল ময়মনসিংহ </p>
+<p><strong>চেম্বার:</strong> শিলাঙ্গন হাসপাতাল, ময়মনসিংহ</p>
 
-<p><strong>সময়:</strong> সন্ধ্যা ৩টা - ১১টা</p>
+<p><strong>সময়:</strong> বিকাল ৩টা - রাত ১১টা</p>
 
-<p><strong>হটলাইন:</strong> ০১৭৫৮০২০০৫৭</p>
+<p><strong>হটলাইন:</strong> 01758020057</p>
 
 </div>
 
 <div class="doctor">
 
-<h3>ডাঃ মীর রাবেয়া আক্তার </h3>
+<h3>ডাঃ মীর রাবেয়া আক্তার</h3>
 
 <p><strong>বিশেষত্ব:</strong> PCOS ও হরমোন চিকিৎসা</p>
 
-<p><strong>চেম্বার:</strong>পপুলার ডায়াগনস্টিক সেন্টার লি., ময়মনসিংহ</p>
+<p><strong>চেম্বার:</strong> পপুলার ডায়াগনস্টিক সেন্টার, ময়মনসিংহ</p>
 
-<p><strong>সময়:</strong> বিকাল ৩টা - ৯টা</p>
+<p><strong>সময়:</strong> বিকাল ৩টা - রাত ৯টা</p>
 
-<p><strong>হটলাইন:</strong> ০১৭৫৮০২০০৫৭</p>
+<p><strong>হটলাইন:</strong> 01758020057</p>
 
 </div>
 
@@ -503,7 +557,7 @@ font-size:30px;
 </a>
 
 <a href="https://suseba.com/gyne-doctor-mymensingh.html">
-নরমাল ডেলিভারি গাইড
+ময়মনসিংহের গাইনি ডাক্তার তালিকা
 </a>
 
 <a href="https://suseba.com/high-blood-pressure-control.html">
@@ -514,7 +568,7 @@ font-size:30px;
 ঘরে বসে ডাক্তারের সিরিয়াল দেয়ার উপায়
 </a>
 
-<a href="/pcos-treatment-guide.html">
+<a href="https://suseba.com/pcos-treatment-guide.html">
 PCOS সমস্যা ও সমাধান
 </a>
 
@@ -550,7 +604,7 @@ PCOS সমস্যা ও সমাধান
 
 </footer>
 
-<!-- SEO SCHEMA -->
+<!-- SCHEMA -->
 
 <script type="application/ld+json">
 {
